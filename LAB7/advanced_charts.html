@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Cloud, Box Plot, and Regression Plot</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .box {
+            fill: steelblue;
+            opacity: 0.7;
+        }
+        .median {
+            stroke: black;
+            stroke-width: 2;
+        }
+        .regression-line {
+            stroke: red;
+            stroke-width: 2;
+        }
+        .scatter {
+            fill: blue;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h2>Word Cloud of Surnames</h2>
+    <div id="wordCloud"></div>
+
+    <h2>Box and Whisker Plot of Balance</h2>
+    <div id="boxPlot"></div>
+
+    <h2>Regression Plot of Age vs Estimated Salary</h2>
+    <div id="regressionPlot"></div>
+
+    <script>
+        // Load CSV data
+        d3.csv("Churn_Modelling.csv").then(function(data) {
+            // -----------------------
+            // 1. Word Cloud of Surnames
+            // -----------------------
+            let surnameCount = {};
+            data.forEach(d => {
+                let surname = d.Surname;
+                if (surname in surnameCount) {
+                    surnameCount[surname]++;
+                } else {
+                    surnameCount[surname] = 1;
+                }
+            });
+
+            let wordData = Object.keys(surnameCount).map(surname => ({
+                text: surname,
+                size: surnameCount[surname] * 10
+            }));
+
+            const width = 800;
+            const height = 400;
+
+            d3.layout.cloud()
+                .size([width, height])
+                .words(wordData)
+                .padding(5)
+                .rotate(() => ~~(Math.random() * 2) * 90)
+                .fontSize(d => d.size)
+                .on("end", drawCloud)
+                .start();
+
+            function drawCloud(words) {
+                const svg = d3.select("#wordCloud").append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+                    .append("g")
+                    .attr("transform", `translate(${width / 2},${height / 2})`);
+
+                svg.selectAll("text")
+                    .data(words)
+                    .enter().append("text")
+                    .style("font-size", d => `${d.size}px`)
+                    .style("fill", () => `hsl(${Math.random() * 360}, 100%, 50%)`)
+                    .attr("text-anchor", "middle")
+                    .attr("transform", d => `translate(${[d.x, d.y]}) rotate(${d.rotate})`)
+                    .text(d => d.text);
+            }
+
+            // -----------------------
+            // 2. Box and Whisker Plot for Balance
+            // -----------------------
+            let balanceValues = data.map(d => +d.Balance).filter(d => !isNaN(d)); // Convert Balance to number
+
+            // Calculate summary statistics for box plot
+            const q1 = d3.quantile(balanceValues.sort(d3.ascending), 0.25);
+            const median = d3.quantile(balanceValues, 0.5);
+            const q3 = d3.quantile(balanceValues, 0.75);
+            const interQuantileRange = q3 - q1;
+            const min = Math.max(0, q1 - 1.5 * interQuantileRange);
+            const max = Math.min(d3.max(balanceValues), q3 + 1.5 * interQuantileRange);
+
+            // Box plot dimensions
+            const boxWidth = 800;
+            const boxHeight = 400;
+            const margin = { top: 20, right: 30, bottom: 30, left: 40 };
+
+            const svgBox = d3.select("#boxPlot").append("svg")
+                .attr("width", boxWidth + margin.left + margin.right)
+                .attr("height", boxHeight + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", `translate(${margin.left},${margin.top})`);
+
+            // X-scale for balance
+            const xScale = d3.scaleLinear()
+                .domain([0, d3.max(balanceValues)])
+                .range([0, boxWidth]);
+
+            // Add X-axis
+            svgBox.append("g")
+                .attr("transform", `translate(0, ${boxHeight})`)
+                .call(d3.axisBottom(xScale));
+
+            // Box plot elements
+            svgBox.append("rect")
+                .attr("class", "box")
+                .attr("x", xScale(q1))
+                .attr("width", xScale(q3) - xScale(q1))
+                .attr("y", boxHeight / 4)
+                .attr("height", boxHeight / 2);
+
+            // Median line
+            svgBox.append("line")
+                .attr("class", "median")
+                .attr("x1", xScale(median))
+                .attr("x2", xScale(median))
+                .attr("y1", boxHeight / 4)
+                .attr("y2", 3 * boxHeight / 4);
+
+            // Whiskers
+            svgBox.append("line")
+                .attr("x1", xScale(min))
+                .attr("x2", xScale(q1))
+                .attr("y1", boxHeight / 2)
+                .attr("y2", boxHeight / 2)
+                .attr("stroke", "black");
+
+            svgBox.append("line")
+                .attr("x1", xScale(q3))
+                .attr("x2", xScale(max))
+                .attr("y1", boxHeight / 2)
+                .attr("y2", boxHeight / 2)
+                .attr("stroke", "black");
+
+            // Min and max lines
+            svgBox.append("line")
+                .attr("x1", xScale(min))
+                .attr("x2", xScale(min))
+                .attr("y1", boxHeight / 3)
+                .attr("y2", 2 * boxHeight / 3)
+                .attr("stroke", "black");
+
+            svgBox.append("line")
+                .attr("x1", xScale(max))
+                .attr("x2", xScale(max))
+                .attr("y1", boxHeight / 3)
+                .attr("y2", 2 * boxHeight / 3)
+                .attr("stroke", "black");
+
+            // -----------------------
+            // 3. Regression Plot for Age vs Estimated Salary
+            // -----------------------
+            let ageValues = data.map(d => +d.Age).filter(d => !isNaN(d));
+            let salaryValues = data.map(d => +d.EstimatedSalary).filter(d => !isNaN(d));
+
+            const svgRegression = d3.select("#regressionPlot").append("svg")
+                .attr("width", boxWidth + margin.left + margin.right)
+                .attr("height", boxHeight + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", `translate(${margin.left},${margin.top})`);
+
+            // X-scale for age
+            const xScaleReg = d3.scaleLinear()
+                .domain([d3.min(ageValues), d3.max(ageValues)])
+                .range([0, boxWidth]);
+
+            // Y-scale for estimated salary
+            const yScaleReg = d3.scaleLinear()
+                .domain([d3.min(salaryValues), d3.max(salaryValues)])
+                .range([boxHeight, 0]);
+
+            // Add X-axis and Y-axis
+            svgRegression.append("g")
+                .attr("transform", `translate(0, ${boxHeight})`)
+                .call(d3.axisBottom(xScaleReg));
+
+            svgRegression.append("g")
+                .call(d3.axisLeft(yScaleReg));
+
+            // Scatterplot points
+            svgRegression.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "scatter")
+                .attr("cx", d => xScaleReg(d.Age))
+                .attr("cy", d => yScaleReg(d.EstimatedSalary))
+                .attr("r", 3);
+
+            // Regression line (calculated manually for simplicity, here flat line)
+            const regressionLine = d3.line()
+                .x(d => xScaleReg(d.Age))
+                .y(() => yScaleReg(d3.mean(salaryValues)));
+
+            svgRegression.append("path")
+                .datum(data)
+                .attr("class", "regression-line")
+                .attr("d", regressionLine);
+        });
+    </script>
+</body>
+</html>

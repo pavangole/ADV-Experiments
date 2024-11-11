@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3.js Data Visualizations</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .chart {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Basic Visualizations</h2>
+
+    <h3>Bar Chart</h3>
+    <div class="chart" id="bar-chart"></div>
+
+    <h3>Pie Chart</h3>
+    <div class="chart" id="pie-chart"></div>
+
+    <h3>Histogram</h3>
+    <div class="chart" id="histogram"></div>
+
+    <script>
+        // Load the data from the CSV file
+        d3.csv("Churn_Modelling.csv").then(data => {
+            // Format the data, converting necessary fields to numbers
+            data.forEach(d => {
+                d.CreditScore = +d.CreditScore;
+                d.Age = +d.Age;
+                d.Tenure = +d.Tenure;
+                d.Balance = +d.Balance;
+                d.NumOfProducts = +d.NumOfProducts;
+                d.HasCrCard = +d.HasCrCard;
+                d.IsActiveMember = +d.IsActiveMember;
+                d.EstimatedSalary = +d.EstimatedSalary;
+                d.Exited = +d.Exited;
+            });
+
+            // Call the functions to create the visualizations
+            createBarChart(data);
+            createPieChart(data);
+            createHistogram(data);
+        });
+
+        // Helper function to create scales
+        function createAxis(svg, x, y, height) {
+            svg.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            svg.append("g")
+                .call(d3.axisLeft(y));
+        }
+
+        // Create Bar Chart
+        function createBarChart(data) {
+            const margin = { top: 20, right: 30, bottom: 40, left: 50 },
+                width = 600 - margin.left - margin.right,
+                height = 400 - margin.top - margin.bottom;
+
+            const svg = d3.select("#bar-chart")
+                .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", `translate(${margin.left},${margin.top})`);
+
+            // Group data by Geography
+            const geographyCounts = d3.rollup(data, v => v.length, d => d.Geography);
+            const x = d3.scaleBand()
+                .domain(Array.from(geographyCounts.keys()))
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(geographyCounts, d => d[1])])
+                .nice()
+                .range([height, 0]);
+
+            createAxis(svg, x, y, height);
+
+            svg.selectAll("rect")
+                .data(Array.from(geographyCounts))
+                .enter()
+                .append("rect")
+                .attr("x", d => x(d[0]))
+                .attr("y", d => y(d[1]))
+                .attr("width", x.bandwidth())
+                .attr("height", d => height - y(d[1]))
+                .attr("fill", "steelblue");
+        }
+
+        // Create Pie Chart
+        function createPieChart(data) {
+            const width = 450, height = 450, margin = 40;
+            const radius = Math.min(width, height) / 2 - margin;
+
+            const svg = d3.select("#pie-chart")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+            const customerExitedCounts = {
+                "Exited": data.filter(d => d.Exited === 1).length,
+                "Stayed": data.filter(d => d.Exited === 0).length
+            };
+
+            const pie = d3.pie().value(d => d[1])(Object.entries(customerExitedCounts));
+            const arc = d3.arc().innerRadius(0).outerRadius(radius);
+
+            svg.selectAll('path')
+                .data(pie)
+                .enter()
+                .append('path')
+                .attr('d', arc)
+                .attr('fill', (d, i) => i === 0 ? 'red' : 'green')
+                .attr("stroke", "white")
+                .style("stroke-width", "2px");
+
+            // Add labels
+            svg.selectAll('text')
+                .data(pie)
+                .enter()
+                .append('text')
+                .text(d => `${d.data[0]}: ${d.data[1]}`)
+                .attr("transform", d => `translate(${arc.centroid(d)})`)
+                .attr("dy", "0.35em")
+                .style("text-anchor", "middle")
+                .style("fill", "white");
+        }
+
+        // Create Histogram
+        function createHistogram(data) {
+            const margin = { top: 20, right: 30, bottom: 40, left: 50 },
+                width = 600 - margin.left - margin.right,
+                height = 400 - margin.top - margin.bottom;
+
+            const svg = d3.select("#histogram")
+                .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", `translate(${margin.left},${margin.top})`);
+
+            const x = d3.scaleLinear()
+                .domain([d3.min(data, d => d.Age), d3.max(data, d => d.Age)])
+                .range([0, width]);
+
+            const bins = d3.bin().domain(x.domain()).thresholds(10)(data.map(d => d.Age));
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(bins, d => d.length)])
+                .range([height, 0]);
+
+            createAxis(svg, x, y, height);
+
+            svg.selectAll("rect")
+                .data(bins)
+                .enter()
+                .append("rect")
+                .attr("x", 1)
+                .attr("transform", d => `translate(${x(d.x0)},${y(d.length)})`)
+                .attr("width", d => x(d.x1) - x(d.x0) - 1)
+                .attr("height", d => height - y(d.length))
+                .style("fill", "#69b3a2");
+        }
+    </script>
+</body>
+
+</html>

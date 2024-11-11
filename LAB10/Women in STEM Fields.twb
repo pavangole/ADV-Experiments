@@ -1,0 +1,2225 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1104.1106                               -->
+<workbook original-version='18.1' source-build='2022.2.1 (20222.22.0812.0353)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://public.tableau.com/workbooks/WomeninSTEMFields?rev=1.0' id='WomeninSTEMFields' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Project 1 data' inline='true' name='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Project 1 data' name='excel-direct.1uipsig0znis8n13vs4ig00u882h'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' interpretationMode='0' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='Project 1 data (2)' name='excel-direct.1056aia1rrjkte1df76dt0fbbhdq'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' interpretationMode='0' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='Project 1 data (3)' name='excel-direct.1nbavcy0v6ez39171xsqv0xx88hl'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' interpretationMode='0' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='Project 1 data (4)' name='excel-direct.0hqlz8t1f146xq16ce7i20x21ynt'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' interpretationMode='0' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='Project 1 data (5)' name='excel-direct.0p0yum50jh675n1es59xw1r5vv3t'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' interpretationMode='0' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation name='Pivot' type='pivot'>
+            <columns>
+              <column datatype='string' name='Pivot Field Names' />
+              <column datatype='real' name='Pivot Field Values' />
+            </columns>
+            <tag name='Pivot Field Names'>
+              <value name='[Engineering]' />
+              <value name='[Social sciences]' />
+              <value name='[Computer sciences &amp; Mathematics and statistics]' />
+              <value name='[Physical sciences]' />
+              <value name='[Psychology]' />
+              <value name='[Biological and agricultural sciences]' />
+            </tag>
+            <groups>
+              <group name='Pivot Field Values'>
+                <field name='[Women Graduated].[Engineering]' />
+                <field name='[Women Graduated].[Social sciences]' />
+                <field name='[Project].[Computer sciences &amp; Mathematics and statistics]' />
+                <field name='[Women Graduated].[Physical sciences]' />
+                <field name='[Women Graduated].[Psychology]' />
+                <field name='[Women Graduated].[Biological and agricultural sciences]' />
+              </group>
+            </groups>
+            <relation type='project'>
+              <columns>
+                <column caption='Mathematics and statistics' hidden='true' name='[Women Graduated].[Mathematics and statistics]' />
+                <column caption='Computer sciences' hidden='true' name='[Women Graduated].[Computer sciences]' />
+                <column name='[Project].[Computer sciences &amp; Mathematics and statistics]' project-type='coalesce' />
+              </columns>
+              <bindings>
+                <binding expression='IF NOT ISNULL([Women Graduated].[Mathematics and statistics]) THEN [Women Graduated].[Mathematics and statistics]&#10;ELSEIF NOT ISNULL([Women Graduated].[Computer sciences]) THEN [Women Graduated].[Computer sciences]&#10;ELSE NULL&#10;END' name='[Project].[Computer sciences &amp; Mathematics and statistics]' />
+              </bindings>
+              <relation connection='excel-direct.1uipsig0znis8n13vs4ig00u882h' name='Women Graduated' table='[&apos;Women Graduated$&apos;]' type='table'>
+                <columns gridOrigin='A1:H17:no:A1:H17:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='real' name='Physical sciences' ordinal='1' />
+                  <column datatype='real' name='Biological and agricultural sciences' ordinal='2' />
+                  <column datatype='real' name='Mathematics and statistics' ordinal='3' />
+                  <column datatype='real' name='Computer sciences' ordinal='4' />
+                  <column datatype='real' name='Psychology' ordinal='5' />
+                  <column datatype='real' name='Social sciences' ordinal='6' />
+                  <column datatype='real' name='Engineering' ordinal='7' />
+                </columns>
+              </relation>
+            </relation>
+          </relation>
+          <relation connection='excel-direct.0p0yum50jh675n1es59xw1r5vv3t' name='Median Annual Earnings' table='[&apos;Median Annual Earnings$&apos;]' type='table'>
+            <columns gridOrigin='A1:D5:no:A1:D5:0' header='yes' outcome='2'>
+              <column datatype='string' name='Ethnicity' ordinal='0' />
+              <column datatype='integer' name='All (Dollars)' ordinal='1' />
+              <column datatype='integer' name='Men (Dollars)' ordinal='2' />
+              <column datatype='integer' name='Women (Dollars)' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0hqlz8t1f146xq16ce7i20x21ynt' name='Professional workin in same maj' table='[&apos;Professional workin in same maj$&apos;]' type='table'>
+            <columns gridOrigin='A1:C7:no:A1:C7:0' header='yes' outcome='6'>
+              <column datatype='string' name='Profession' ordinal='0' />
+              <column datatype='integer' name='Men (%)' ordinal='1' />
+              <column datatype='integer' name='Women (%)' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1056aia1rrjkte1df76dt0fbbhdq' name='Women Graduated1' table='[&apos;Women Graduated$&apos;]' type='table'>
+            <columns gridOrigin='A1:H17:no:A1:H17:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Year' ordinal='0' />
+              <column datatype='real' name='Physical sciences' ordinal='1' />
+              <column datatype='real' name='Biological and agricultural sciences' ordinal='2' />
+              <column datatype='real' name='Mathematics and statistics' ordinal='3' />
+              <column datatype='real' name='Computer sciences' ordinal='4' />
+              <column datatype='real' name='Psychology' ordinal='5' />
+              <column datatype='real' name='Social sciences' ordinal='6' />
+              <column datatype='real' name='Engineering' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1nbavcy0v6ez39171xsqv0xx88hl' name='Stem jobs by Education' table='[&apos;Stem jobs by Education$&apos;]' type='table'>
+            <columns gridOrigin='A1:F9:no:A1:F9:0' header='yes' outcome='2'>
+              <column datatype='string' name='F1' ordinal='0' />
+              <column datatype='string' name='High school or less' ordinal='1' />
+              <column datatype='real' name='Some college' ordinal='2' />
+              <column datatype='string' name='Bachelor&apos;s degree' ordinal='3' />
+              <column datatype='real' name='Master&apos;s degree' ordinal='4' />
+              <column datatype='string' name='Professional Doctoral degree' ordinal='5' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[All (Dollars)]' value='[Median Annual Earnings].[All (Dollars)]' />
+          <map key='[Bachelor&apos;s degree]' value='[Stem jobs by Education].[Bachelor&apos;s degree]' />
+          <map key='[Biological and agricultural sciences]' value='[Women Graduated1].[Biological and agricultural sciences]' />
+          <map key='[Computer sciences]' value='[Women Graduated1].[Computer sciences]' />
+          <map key='[Engineering]' value='[Women Graduated1].[Engineering]' />
+          <map key='[Ethnicity]' value='[Median Annual Earnings].[Ethnicity]' />
+          <map key='[F1]' value='[Stem jobs by Education].[F1]' />
+          <map key='[High school or less]' value='[Stem jobs by Education].[High school or less]' />
+          <map key='[Master&apos;s degree]' value='[Stem jobs by Education].[Master&apos;s degree]' />
+          <map key='[Mathematics and statistics]' value='[Women Graduated1].[Mathematics and statistics]' />
+          <map key='[Men (%)]' value='[Professional workin in same maj].[Men (%)]' />
+          <map key='[Men (Dollars)]' value='[Median Annual Earnings].[Men (Dollars)]' />
+          <map key='[Physical sciences]' value='[Women Graduated1].[Physical sciences]' />
+          <map key='[Pivot Field Names]' value='[Pivot].[Pivot Field Names]' />
+          <map key='[Pivot Field Values]' value='[Pivot].[Pivot Field Values]' />
+          <map key='[Profession]' value='[Professional workin in same maj].[Profession]' />
+          <map key='[Professional Doctoral degree]' value='[Stem jobs by Education].[Professional Doctoral degree]' />
+          <map key='[Psychology]' value='[Women Graduated1].[Psychology]' />
+          <map key='[Social sciences]' value='[Women Graduated1].[Social sciences]' />
+          <map key='[Some college]' value='[Stem jobs by Education].[Some college]' />
+          <map key='[Women (%)]' value='[Professional workin in same maj].[Women (%)]' />
+          <map key='[Women (Dollars)]' value='[Median Annual Earnings].[Women (Dollars)]' />
+          <map key='[Year (Women Graduated1)]' value='[Women Graduated1].[Year]' />
+          <map key='[Year]' value='[Women Graduated].[Year]' />
+        </cols>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Women Graduated]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H17:no:A1:H17:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Median Annual Earnings]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D5:no:A1:D5:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Professional workin in same maj]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C7:no:A1:C7:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Women Graduated1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H17:no:A1:H17:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Stem jobs by Education]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F9:no:A1:F9:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Women Graduated]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ethnicity</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Ethnicity]</local-name>
+            <parent-name>[Median Annual Earnings]</parent-name>
+            <remote-alias>Ethnicity</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>All (Dollars)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[All (Dollars)]</local-name>
+            <parent-name>[Median Annual Earnings]</parent-name>
+            <remote-alias>All (Dollars)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Men (Dollars)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Men (Dollars)]</local-name>
+            <parent-name>[Median Annual Earnings]</parent-name>
+            <remote-alias>Men (Dollars)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Women (Dollars)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Women (Dollars)]</local-name>
+            <parent-name>[Median Annual Earnings]</parent-name>
+            <remote-alias>Women (Dollars)</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Profession</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Profession]</local-name>
+            <parent-name>[Professional workin in same maj]</parent-name>
+            <remote-alias>Profession</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Men (%)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Men (%)]</local-name>
+            <parent-name>[Professional workin in same maj]</parent-name>
+            <remote-alias>Men (%)</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Women (%)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Women (%)]</local-name>
+            <parent-name>[Professional workin in same maj]</parent-name>
+            <remote-alias>Women (%)</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year (Women Graduated1)]</local-name>
+            <parent-name>[Women Graduated1]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Physical sciences</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Physical sciences]</local-name>
+            <parent-name>[Women Graduated1]</parent-name>
+            <remote-alias>Physical sciences</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Biological and agricultural sciences</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Biological and agricultural sciences]</local-name>
+            <parent-name>[Women Graduated1]</parent-name>
+            <remote-alias>Biological and agricultural sciences</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mathematics and statistics</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mathematics and statistics]</local-name>
+            <parent-name>[Women Graduated1]</parent-name>
+            <remote-alias>Mathematics and statistics</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Computer sciences</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Computer sciences]</local-name>
+            <parent-name>[Women Graduated1]</parent-name>
+            <remote-alias>Computer sciences</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Psychology</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Psychology]</local-name>
+            <parent-name>[Women Graduated1]</parent-name>
+            <remote-alias>Psychology</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Social sciences</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Social sciences]</local-name>
+            <parent-name>[Women Graduated1]</parent-name>
+            <remote-alias>Social sciences</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Engineering</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Engineering]</local-name>
+            <parent-name>[Women Graduated1]</parent-name>
+            <remote-alias>Engineering</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Stem jobs by Education]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>High school or less</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[High school or less]</local-name>
+            <parent-name>[Stem jobs by Education]</parent-name>
+            <remote-alias>High school or less</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Some college</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Some college]</local-name>
+            <parent-name>[Stem jobs by Education]</parent-name>
+            <remote-alias>Some college</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bachelor&apos;s degree</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bachelor&apos;s degree]</local-name>
+            <parent-name>[Stem jobs by Education]</parent-name>
+            <remote-alias>Bachelor&apos;s degree</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Master&apos;s degree</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Master&apos;s degree]</local-name>
+            <parent-name>[Stem jobs by Education]</parent-name>
+            <remote-alias>Master&apos;s degree</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Professional Doctoral degree</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Professional Doctoral degree]</local-name>
+            <parent-name>[Stem jobs by Education]</parent-name>
+            <remote-alias>Professional Doctoral degree</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Percentage of Womemn' datatype='real' name='[Calculation_1000643552654471169]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(RUNNING_SUM(SUM([Computer sciences]))/600)*100'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='string' name='[Profession]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Professional Doctoral degree]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Year (Women Graduated1)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='Median Annual Earnings' datatype='table' name='[__tableau_internal_object_id__].[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]' role='measure' type='quantitative' />
+      <column caption='Professional workin in same maj' datatype='table' name='[__tableau_internal_object_id__].[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]' role='measure' type='quantitative' />
+      <column caption='Stem jobs by Education' datatype='table' name='[__tableau_internal_object_id__].[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]' role='measure' type='quantitative' />
+      <column caption='Women Graduated' datatype='table' name='[__tableau_internal_object_id__].[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]' role='measure' type='quantitative' />
+      <column caption='Women Graduated1' datatype='table' name='[__tableau_internal_object_id__].[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]' role='measure' type='quantitative' />
+      <column-instance column='[Profession]' derivation='None' name='[none:Profession:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Professional Doctoral degree]' derivation='None' name='[none:Professional Doctoral degree:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/Tableau challenges/Project 1 data after extract.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='08/28/2022 06:05:37 AM'>
+          <relation type='collection'>
+            <relation name='Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE' table='[Extract].[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]' type='table' />
+            <relation name='Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D' table='[Extract].[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]' type='table' />
+            <relation name='Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD' table='[Extract].[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]' type='table' />
+            <relation name='Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52' table='[Extract].[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]' type='table' />
+            <relation name='Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118' table='[Extract].[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]' type='table' />
+          </relation>
+          <cols>
+            <map key='[All (Dollars)]' value='[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D].[All (Dollars)]' />
+            <map key='[Bachelor&apos;s degree]' value='[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118].[Bachelor&apos;s degree]' />
+            <map key='[Biological and agricultural sciences]' value='[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52].[Biological and agricultural sciences]' />
+            <map key='[Computer sciences]' value='[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52].[Computer sciences]' />
+            <map key='[Engineering]' value='[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52].[Engineering]' />
+            <map key='[Ethnicity]' value='[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D].[Ethnicity]' />
+            <map key='[F1]' value='[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118].[F1]' />
+            <map key='[High school or less]' value='[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118].[High school or less]' />
+            <map key='[Master&apos;s degree]' value='[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118].[Master&apos;s degree]' />
+            <map key='[Mathematics and statistics]' value='[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52].[Mathematics and statistics]' />
+            <map key='[Men (%)]' value='[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD].[Men (%)]' />
+            <map key='[Men (Dollars)]' value='[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D].[Men (Dollars)]' />
+            <map key='[Physical sciences]' value='[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52].[Physical sciences]' />
+            <map key='[Pivot Field Names]' value='[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE].[Pivot Field Names]' />
+            <map key='[Pivot Field Values]' value='[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE].[Pivot Field Values]' />
+            <map key='[Profession]' value='[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD].[Profession]' />
+            <map key='[Professional Doctoral degree]' value='[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118].[Professional Doctoral degree]' />
+            <map key='[Psychology]' value='[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52].[Psychology]' />
+            <map key='[Social sciences]' value='[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52].[Social sciences]' />
+            <map key='[Some college]' value='[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118].[Some college]' />
+            <map key='[Women (%)]' value='[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD].[Women (%)]' />
+            <map key='[Women (Dollars)]' value='[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D].[Women (Dollars)]' />
+            <map key='[Year (Women Graduated1)]' value='[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52].[Year]' />
+            <map key='[Year]' value='[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE].[Year]' />
+          </cols>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='Project 1 data' increment-value='%null%' refresh-type='create' rows-inserted='130' timestamp-start='2022-08-28 06:05:35.350' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Women Graduated</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Names</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Names]</local-name>
+              <parent-name>[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]</parent-name>
+              <remote-alias>Pivot Field Names</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Values</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Pivot Field Values]</local-name>
+              <parent-name>[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]</parent-name>
+              <remote-alias>Pivot Field Values</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Pivot</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>71</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ethnicity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Ethnicity]</local-name>
+              <parent-name>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</parent-name>
+              <remote-alias>Ethnicity</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Median Annual Earnings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>All (Dollars)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[All (Dollars)]</local-name>
+              <parent-name>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</parent-name>
+              <remote-alias>All (Dollars)</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Median Annual Earnings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Men (Dollars)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Men (Dollars)]</local-name>
+              <parent-name>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</parent-name>
+              <remote-alias>Men (Dollars)</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Median Annual Earnings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Women (Dollars)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Women (Dollars)]</local-name>
+              <parent-name>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</parent-name>
+              <remote-alias>Women (Dollars)</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Median Annual Earnings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Profession</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Profession]</local-name>
+              <parent-name>[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]</parent-name>
+              <remote-alias>Profession</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Professional workin in same maj</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Men (%)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Men (%)]</local-name>
+              <parent-name>[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]</parent-name>
+              <remote-alias>Men (%)</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Professional workin in same maj</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Women (%)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Women (%)]</local-name>
+              <parent-name>[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]</parent-name>
+              <remote-alias>Women (%)</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Professional workin in same maj</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year (Women Graduated1)]</local-name>
+              <parent-name>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Women Graduated1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Physical sciences</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Physical sciences]</local-name>
+              <parent-name>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</parent-name>
+              <remote-alias>Physical sciences</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Women Graduated1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Biological and agricultural sciences</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Biological and agricultural sciences]</local-name>
+              <parent-name>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</parent-name>
+              <remote-alias>Biological and agricultural sciences</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Women Graduated1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mathematics and statistics</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Mathematics and statistics]</local-name>
+              <parent-name>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</parent-name>
+              <remote-alias>Mathematics and statistics</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Women Graduated1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Computer sciences</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Computer sciences]</local-name>
+              <parent-name>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</parent-name>
+              <remote-alias>Computer sciences</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Women Graduated1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Psychology</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Psychology]</local-name>
+              <parent-name>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</parent-name>
+              <remote-alias>Psychology</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Women Graduated1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Social sciences</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Social sciences]</local-name>
+              <parent-name>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</parent-name>
+              <remote-alias>Social sciences</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Women Graduated1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Engineering</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Engineering]</local-name>
+              <parent-name>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</parent-name>
+              <remote-alias>Engineering</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Women Graduated1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Stem jobs by Education</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>High school or less</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[High school or less]</local-name>
+              <parent-name>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</parent-name>
+              <remote-alias>High school or less</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Stem jobs by Education</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Some college</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Some college]</local-name>
+              <parent-name>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</parent-name>
+              <remote-alias>Some college</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Stem jobs by Education</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Bachelor&apos;s degree</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Bachelor&apos;s degree]</local-name>
+              <parent-name>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</parent-name>
+              <remote-alias>Bachelor&apos;s degree</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Stem jobs by Education</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Master&apos;s degree</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Master&apos;s degree]</local-name>
+              <parent-name>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</parent-name>
+              <remote-alias>Master&apos;s degree</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Stem jobs by Education</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Professional Doctoral degree</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Professional Doctoral degree]</local-name>
+              <parent-name>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</parent-name>
+              <remote-alias>Professional Doctoral degree</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Stem jobs by Education</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Professional Doctoral degree:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;14&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;41&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;37&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;45&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;32&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;42\%&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;21&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Profession:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Computer major workingin computers&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mathmajor working in math&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Lifesciences major workingin lifesciences&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Health professions major workingin health-relatedjob&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Physicalsciences major workingin  physicalsciences&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Engineering major working in engineering&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Median Annual Earnings' id='Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D'>
+            <properties context=''>
+              <relation connection='excel-direct.0p0yum50jh675n1es59xw1r5vv3t' name='Median Annual Earnings' table='[&apos;Median Annual Earnings$&apos;]' type='table'>
+                <columns gridOrigin='A1:D5:no:A1:D5:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Ethnicity' ordinal='0' />
+                  <column datatype='integer' name='All (Dollars)' ordinal='1' />
+                  <column datatype='integer' name='Men (Dollars)' ordinal='2' />
+                  <column datatype='integer' name='Women (Dollars)' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D' table='[Extract].[Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D]' type='table' />
+            </properties>
+          </object>
+          <object caption='Professional workin in same maj' id='Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD'>
+            <properties context=''>
+              <relation connection='excel-direct.0hqlz8t1f146xq16ce7i20x21ynt' name='Professional workin in same maj' table='[&apos;Professional workin in same maj$&apos;]' type='table'>
+                <columns gridOrigin='A1:C7:no:A1:C7:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Profession' ordinal='0' />
+                  <column datatype='integer' name='Men (%)' ordinal='1' />
+                  <column datatype='integer' name='Women (%)' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD' table='[Extract].[Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD]' type='table' />
+            </properties>
+          </object>
+          <object caption='Stem jobs by Education' id='Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118'>
+            <properties context=''>
+              <relation connection='excel-direct.1nbavcy0v6ez39171xsqv0xx88hl' name='Stem jobs by Education' table='[&apos;Stem jobs by Education$&apos;]' type='table'>
+                <columns gridOrigin='A1:F9:no:A1:F9:0' header='yes' outcome='2'>
+                  <column datatype='string' name='F1' ordinal='0' />
+                  <column datatype='string' name='High school or less' ordinal='1' />
+                  <column datatype='real' name='Some college' ordinal='2' />
+                  <column datatype='string' name='Bachelor&apos;s degree' ordinal='3' />
+                  <column datatype='real' name='Master&apos;s degree' ordinal='4' />
+                  <column datatype='string' name='Professional Doctoral degree' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118' table='[Extract].[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]' type='table' />
+            </properties>
+          </object>
+          <object caption='Women Graduated' id='Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE'>
+            <properties context=''>
+              <relation name='Pivot' type='pivot'>
+                <columns>
+                  <column datatype='string' name='Pivot Field Names' />
+                  <column datatype='real' name='Pivot Field Values' />
+                </columns>
+                <tag name='Pivot Field Names'>
+                  <value name='[Engineering]' />
+                  <value name='[Social sciences]' />
+                  <value name='[Computer sciences &amp; Mathematics and statistics]' />
+                  <value name='[Physical sciences]' />
+                  <value name='[Psychology]' />
+                  <value name='[Biological and agricultural sciences]' />
+                </tag>
+                <groups>
+                  <group name='Pivot Field Values'>
+                    <field name='[Women Graduated].[Engineering]' />
+                    <field name='[Women Graduated].[Social sciences]' />
+                    <field name='[Project].[Computer sciences &amp; Mathematics and statistics]' />
+                    <field name='[Women Graduated].[Physical sciences]' />
+                    <field name='[Women Graduated].[Psychology]' />
+                    <field name='[Women Graduated].[Biological and agricultural sciences]' />
+                  </group>
+                </groups>
+                <relation type='project'>
+                  <columns>
+                    <column caption='Mathematics and statistics' hidden='true' name='[Women Graduated].[Mathematics and statistics]' />
+                    <column caption='Computer sciences' hidden='true' name='[Women Graduated].[Computer sciences]' />
+                    <column name='[Project].[Computer sciences &amp; Mathematics and statistics]' project-type='coalesce' />
+                  </columns>
+                  <bindings>
+                    <binding expression='IF NOT ISNULL([Women Graduated].[Mathematics and statistics]) THEN [Women Graduated].[Mathematics and statistics]&#10;ELSEIF NOT ISNULL([Women Graduated].[Computer sciences]) THEN [Women Graduated].[Computer sciences]&#10;ELSE NULL&#10;END' name='[Project].[Computer sciences &amp; Mathematics and statistics]' />
+                  </bindings>
+                  <relation connection='excel-direct.1uipsig0znis8n13vs4ig00u882h' name='Women Graduated' table='[&apos;Women Graduated$&apos;]' type='table'>
+                    <columns gridOrigin='A1:H17:no:A1:H17:0' header='yes' outcome='6'>
+                      <column datatype='integer' name='Year' ordinal='0' />
+                      <column datatype='real' name='Physical sciences' ordinal='1' />
+                      <column datatype='real' name='Biological and agricultural sciences' ordinal='2' />
+                      <column datatype='real' name='Mathematics and statistics' ordinal='3' />
+                      <column datatype='real' name='Computer sciences' ordinal='4' />
+                      <column datatype='real' name='Psychology' ordinal='5' />
+                      <column datatype='real' name='Social sciences' ordinal='6' />
+                      <column datatype='real' name='Engineering' ordinal='7' />
+                    </columns>
+                  </relation>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE' table='[Extract].[Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE]' type='table' />
+            </properties>
+          </object>
+          <object caption='Women Graduated1' id='Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52'>
+            <properties context=''>
+              <relation connection='excel-direct.1056aia1rrjkte1df76dt0fbbhdq' name='Women Graduated1' table='[&apos;Women Graduated$&apos;]' type='table'>
+                <columns gridOrigin='A1:H17:no:A1:H17:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='real' name='Physical sciences' ordinal='1' />
+                  <column datatype='real' name='Biological and agricultural sciences' ordinal='2' />
+                  <column datatype='real' name='Mathematics and statistics' ordinal='3' />
+                  <column datatype='real' name='Computer sciences' ordinal='4' />
+                  <column datatype='real' name='Psychology' ordinal='5' />
+                  <column datatype='real' name='Social sciences' ordinal='6' />
+                  <column datatype='real' name='Engineering' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52' table='[Extract].[Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Pivot Field Names]' />
+              <expression op='[Ethnicity]' />
+            </expression>
+            <first-end-point object-id='Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE' />
+            <second-end-point object-id='Median Annual Earnings_4BADC326832F48BD9C44B07071819C6D' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Pivot Field Names]' />
+              <expression op='[Profession]' />
+            </expression>
+            <first-end-point object-id='Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE' />
+            <second-end-point object-id='Professional workin in same maj_E7440F51185A4A84A10DE3E2819BDBDD' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Engineering]' />
+              <expression op='[Some college]' />
+            </expression>
+            <first-end-point object-id='Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52' />
+            <second-end-point object-id='Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Year]' />
+              <expression op='[Year (Women Graduated1)]' />
+            </expression>
+            <first-end-point object-id='Women Graduated_750B7D0D8D2A4656BCA6F4A9F8843EFE' />
+            <second-end-point object-id='Women Graduated_D6B0E027ADF749A6B1E51D76BB07ED52' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_401739E4D69D4DC192BB38F39439616D]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='A bar graph' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Professional Doctoral degree' />
+        <param name='target' value='A bar graph' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='A bar graph'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='10'>A Bar Graph is for % of women are in health-related jobs with their master’s education and Professional/Doctoral Degree</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/WomeninSTEMFields/Abargraph?rev=' id='65036718' path='/workbooks/WomeninSTEMFields' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Project 1 data' name='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr'>
+            <column datatype='real' name='[Master&apos;s degree]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Professional Doctoral degree]' role='dimension' type='nominal' />
+            <column caption='Stem jobs by Education' datatype='table' name='[__tableau_internal_object_id__].[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]' derivation='Count' name='[__tableau_internal_object_id__].[pcto:cnt:Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Professional Doctoral degree]' derivation='None' name='[none:Professional Doctoral degree:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Master&apos;s degree]' derivation='Sum' name='[pcto:sum:Master&apos;s degree:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Professional Doctoral degree:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[__tableau_internal_object_id__].[pcto:cnt:Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Professional Doctoral degree:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[pcto:sum:Master&apos;s degree:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Professional Doctoral degree:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[__tableau_internal_object_id__].[pcto:cnt:Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118:qk] + [federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[pcto:sum:Master&apos;s degree:qk])</rows>
+        <cols>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Professional Doctoral degree:nk]</cols>
+      </table>
+      <simple-id uuid='{03627728-C661-43A3-B84D-071165F50A0A}' />
+    </worksheet>
+    <worksheet name='A pie graph of women in'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Pie Graph of Women From Different Education Platforms</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/WomeninSTEMFields/Apiegraphofwomenin?rev=' id='65036715' path='/workbooks/WomeninSTEMFields' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Project 1 data' name='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr'>
+            <column datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='Sum' name='[pcto:sum:Pivot Field Values:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Pivot Field Values]' derivation='Sum' name='[sum:Pivot Field Values:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f0f1e8' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Pivot Field Names:nk]' />
+              <wedge-size column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Pivot Field Values:qk]' />
+              <text column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[pcto:sum:Pivot Field Values:qk]' />
+              <text column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Pivot Field Names:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D8104631-4647-4BAC-93B3-C9A17E748CFD}' />
+    </worksheet>
+    <worksheet name='computerscience&amp;engineering'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Difference Between Computer Science Students and Engineering Students</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run bold='true' fontname='Tableau Semibold'>In 2000 the % of women in computer science and engineering are .8.22% and 6.5% respectively at the end of 2015 the trend is 5.28% and 6.4% respectively ,so the Computer science students got decreased by 2.94%</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/WomeninSTEMFields/computerscienceengineering?rev=' id='65036717' path='/workbooks/WomeninSTEMFields' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Project 1 data' name='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr'>
+            <column datatype='real' name='[Computer sciences]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Engineering]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Computer sciences]' derivation='Sum' name='[pcto:sum:Computer sciences:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Engineering]' derivation='Sum' name='[pcto:sum:Engineering:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Computer sciences]' derivation='Sum' name='[sum:Computer sciences:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Engineering]' derivation='Sum' name='[sum:Engineering:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Year:qk]' included-values='in-range'>
+            <min>2000</min>
+            <max>2015</max>
+          </filter>
+          <slices>
+            <column>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Year:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Computer sciences:qk]' palette='tableau-map-temperatur' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f0f1e8' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Year:qk]' />
+              <lod column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Engineering:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[pcto:sum:Computer sciences:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Computer sciences:qk]' />
+              <text column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Year:qk]' />
+              <lod column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Engineering:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[pcto:sum:Engineering:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Year:qk]' />
+              <lod column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Engineering:qk]' />
+              <lod column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Computer sciences:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[pcto:sum:Computer sciences:qk] + [federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[pcto:sum:Engineering:qk])</rows>
+        <cols>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{0B958A27-A8F0-4324-A8C4-3EB74923A51E}' />
+    </worksheet>
+    <worksheet name='cross tab of men and women working'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='10'>Cross Tab Of Men And Women Working In Their Related Fields Of Their Education</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/WomeninSTEMFields/crosstabofmenandwomenworking?rev=' id='65036720' path='/workbooks/WomeninSTEMFields' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Project 1 data' name='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr'>
+            <column datatype='real' name='[Computer sciences]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Engineering]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Men (%)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Women (%)]' role='measure' type='quantitative' />
+            <column caption='Stem jobs by Education' datatype='table' name='[__tableau_internal_object_id__].[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118]' derivation='Count' name='[__tableau_internal_object_id__].[cum:cnt:Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118:qk]' pivot='key' type='quantitative'>
+              <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+            </column-instance>
+            <column-instance column='[Computer sciences]' derivation='Sum' name='[cum:sum:Computer sciences:qk]' pivot='key' type='quantitative'>
+              <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+            </column-instance>
+            <column-instance column='[Engineering]' derivation='Sum' name='[sum:Engineering:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Men (%)]' derivation='Sum' name='[sum:Men (%):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Women (%)]' derivation='Sum' name='[sum:Women (%):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[cum:sum:Computer sciences:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[__tableau_internal_object_id__].[cum:cnt:Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Engineering:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Men (\%):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Women (\%):qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[cum:sum:Computer sciences:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[__tableau_internal_object_id__].[cum:cnt:Stem jobs by Education_81BDF3200D0B408A9B2DFB78D657F118:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Engineering:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Men (\%):qk]&quot;</bucket>
+              <bucket>&quot;[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Women (\%):qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[:Measure Names]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{25ACDE6F-6061-4951-8049-71C7F1044F88}' />
+    </worksheet>
+    <worksheet name='ethnicity'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='10'>Ethnicity Bar Graph</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/WomeninSTEMFields/ethnicity?rev=' id='65036721' path='/workbooks/WomeninSTEMFields' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Project 1 data' name='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr'>
+            <column datatype='integer' name='[All (Dollars)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Ethnicity]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Men (Dollars)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Women (Dollars)]' role='measure' type='quantitative' />
+            <column-instance column='[All (Dollars)]' derivation='Sum' name='[diff:sum:All (Dollars):qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Rows' type='Difference'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Ethnicity]' derivation='None' name='[none:Ethnicity:nk]' pivot='key' type='nominal' />
+            <column-instance column='[All (Dollars)]' derivation='Sum' name='[sum:All (Dollars):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Men (Dollars)]' derivation='Sum' name='[sum:Men (Dollars):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Women (Dollars)]' derivation='Sum' name='[sum:Women (Dollars):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:All (Dollars):qk]' palette='orange_gold_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Men (Dollars):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Men (Dollars):qk]' />
+              <text column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Men (Dollars):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Women (Dollars):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Women (Dollars):qk]' />
+              <text column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Women (Dollars):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[diff:sum:All (Dollars):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:All (Dollars):qk]' />
+              <text column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:All (Dollars):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Men (Dollars):qk] + ([federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Women (Dollars):qk] + [federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[diff:sum:All (Dollars):qk]))</rows>
+        <cols>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Ethnicity:nk]</cols>
+      </table>
+      <simple-id uuid='{C8E979FF-D2CF-4647-A279-FEF2C310D935}' />
+    </worksheet>
+    <worksheet name='percent of women'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='10'>Bar Graph for Gender Gap in STEM Jobs</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run fontcolor='#333333' fontname='Tableau Light' fontsize='8'>The Gender Gap between Men and Women in their Stem Jobs are 53 and 38 in Computer major ,</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#333333' fontname='Tableau Light' fontsize='8'>30 and 24 in Engineering, 61 and 69 in Health Professions ,no difference in lifescience and math major,10 and 8 in Physicalscience major work</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/WomeninSTEMFields/percentofwomen?rev=' id='65036719' path='/workbooks/WomeninSTEMFields' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Project 1 data' name='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr'>
+            <column datatype='integer' name='[Men (%)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Profession]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Women (%)]' role='measure' type='quantitative' />
+            <column-instance column='[Profession]' derivation='None' name='[none:Profession:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Women (%)]' derivation='Sum' name='[pcto:sum:Women (%):qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Men (%)]' derivation='Sum' name='[sum:Men (%):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Women (%)]' derivation='Sum' name='[sum:Women (%):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[pcto:sum:Women (%):qk]' scope='rows' value='WOMEN' />
+            <format attr='title' class='0' field='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Men (%):qk]' scope='rows' value='MEN' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Women (%):qk]' palette='orange_gold_10_0' type='interpolated' />
+            <encoding attr='color' field='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[pcto:sum:Women (%):qk]' palette='orange_gold_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Profession:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[pcto:sum:Women (%):qk]'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Profession:nk]' />
+              <text column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Women (%):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Men (%):qk]'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Profession:nk]' />
+              <text column='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Men (%):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[pcto:sum:Women (%):qk] + [federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Men (%):qk])</rows>
+        <cols>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Profession:nk]</cols>
+      </table>
+      <simple-id uuid='{0EEDA578-F6EC-4139-89EA-12A32D9D27FC}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Women in STEM Fields'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/WomeninSTEMFields/WomeninSTEMFields?rev=' id='65036716' path='/workbooks/WomeninSTEMFields' revision='' />
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f0f1e8' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1600' minheight='800' minwidth='1600' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='16' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='70' param='horz' type-v2='layout-flow' w='99000' x='500' y='1000'>
+            <zone h='98000' id='65' param='horz' type-v2='layout-flow' w='99000' x='500' y='1000'>
+              <zone h='98000' id='19' param='horz' type-v2='layout-flow' w='99000' x='500' y='1000'>
+                <zone h='98000' id='17' type-v2='layout-basic' w='47562' x='500' y='1000'>
+                  <zone h='41748' id='23' name='A pie graph of women in' w='47562' x='500' y='1000'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='56252' id='27' name='A bar graph' w='29124' x='500' y='42748'>
+                    <layout-cache cell-count-w='7' minheight='346' non-cell-size-w='74' type-h='scalable' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='43376' id='63' name='cross tab of men and women working' w='18438' x='29624' y='42748'>
+                    <layout-cache cell-count-h='5' cell-count-w='1' non-cell-size-h='88' non-cell-size-w='161' type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='12876' id='66' type-v2='text' w='18438' x='29624' y='86124'>
+                    <formatted-text>
+                      <run fontcolor='#000000' fontname='Calibri'>percent of women are working in computers who majored in Computers  340.5</run>
+                      <run>Æ&#10;</run>
+                      <run fontcolor='#000000' fontname='Calibri'>percent of women are working in Engineering jobs who majored in Engineering 312.5</run>
+                    </formatted-text>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone fixed-size='823' h='98000' id='18' is-fixed='true' param='vert' type-v2='layout-flow' w='51438' x='48062' y='1000'>
+                  <zone fixed-size='324' h='41500' id='25' is-fixed='true' name='computerscience&amp;engineering' show-caption='true' w='51438' x='48062' y='1000'>
+                    <layout-cache minheight='336' minwidth='175' type-h='scalable' type-w='scalable' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='49125' id='71' name='ethnicity' w='26313' x='48063' y='44375' />
+        <zone forceUpdate='true' h='6125' id='75' type-v2='text' w='26813' x='48000' y='93375'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Calibri'>The difference in salary in women and men is the bleck 58000 and hispan 60758 and white 71897 anf finally asian is no difference</run>
+          </formatted-text>
+        </zone>
+        <zone h='44875' id='76' name='percent of women' w='25313' x='74438' y='44250' />
+        <zone forceUpdate='true' h='9000' id='77' type-v2='text' w='25375' x='74250' y='89250'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#333333' fontname='Tableau Light' fontsize='8'>The Gender Gap between Men and Women in their Stem Jobs are 53 and 38 in Computer major ,30 and 24 in Engineering, 61 and 69 in Health Professions ,no difference in lifescience and math major,10 and 8 in Physicalscience major work</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1950' minheight='1950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='83' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='82' param='vert' type-v2='layout-flow' w='99000' x='500' y='1000'>
+                <zone fixed-size='280' h='41748' id='23' is-fixed='true' name='A pie graph of women in' w='47562' x='500' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='41500' id='25' is-fixed='true' name='computerscience&amp;engineering' show-caption='true' w='51438' x='48062' y='1000'>
+                  <layout-cache minheight='336' minwidth='175' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='56252' id='27' is-fixed='true' name='A bar graph' w='29124' x='500' y='42748'>
+                  <layout-cache cell-count-w='7' minheight='346' non-cell-size-w='74' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43376' id='63' is-fixed='true' name='cross tab of men and women working' w='18438' x='29624' y='42748'>
+                  <layout-cache cell-count-h='5' cell-count-w='1' non-cell-size-h='88' non-cell-size-w='161' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44875' id='76' is-fixed='true' name='percent of women' w='25313' x='74438' y='44250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49125' id='71' is-fixed='true' name='ethnicity' w='26313' x='48063' y='44375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='12876' id='66' type-v2='text' w='18438' x='29624' y='86124'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Calibri'>percent of women are working in computers who majored in Computers  340.5</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Calibri'>percent of women are working in Engineering jobs who majored in Engineering 312.5</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='9000' id='77' type-v2='text' w='25375' x='74250' y='89250'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#333333' fontname='Tableau Light' fontsize='8'>The Gender Gap between Men and Women in their Stem Jobs are 53 and 38 in Computer major ,30 and 24 in Engineering, 61 and 69 in Health Professions ,no difference in lifescience and math major,10 and 8 in Physicalscience major work</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='6125' id='75' type-v2='text' w='26813' x='48000' y='93375'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Calibri'>The difference in salary in women and men is the bleck 58000 and hispan 60758 and white 71897 anf finally asian is no difference</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{0377B18C-80F6-4CAA-BC97-425C63D53A86}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='A pie graph of women in'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Pivot Field Names:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Pivot Field Names:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BF9E683F-13D3-4E5A-AC88-3E4E379A10C5}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Women in STEM Fields'>
+      <viewpoints>
+        <viewpoint name='A bar graph'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Professional Doctoral degree:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='A pie graph of women in'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Pivot Field Names:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='computerscience&amp;engineering'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='cross tab of men and women working'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='ethnicity'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='percent of women'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Profession:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='77' />
+      <simple-id uuid='{6A609B22-9DB7-489B-BF88-3653C430A6EA}' />
+    </window>
+    <window class='worksheet' name='computerscience&amp;engineering'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Computer sciences:qk]' type='color' />
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='false' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='92'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{932E3372-2F61-4746-8835-2B7FAF0D0540}' />
+    </window>
+    <window class='worksheet' name='A bar graph'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='300'>
+            <card pane-specification-id='1' param='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Professional Doctoral degree:nk]' type='color' />
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='92'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Bachelor&apos;s degree:nk]</field>
+            <field>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:F1:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F2F4CE17-635B-4EE8-B601-1844D1AB092C}' />
+    </window>
+    <window class='worksheet' name='percent of women'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+            <card pane-specification-id='6' param='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Profession:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='92'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Bachelor&apos;s degree:nk]</field>
+            <field>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:F1:nk]</field>
+            <field>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Profession:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B3F13469-420C-440C-860E-84E7BE2680AD}' />
+    </window>
+    <window class='worksheet' name='cross tab of men and women working'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='92'>
+            <card type='caption' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{069EE2A5-70C1-4835-80CD-61889E039A55}' />
+    </window>
+    <window class='worksheet' name='ethnicity'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:All (Dollars):qk]' type='color' />
+            <card pane-specification-id='1' param='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Men (Dollars):qk]' type='color' />
+            <card pane-specification-id='2' param='[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[sum:Women (Dollars):qk]' type='color' />
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1vwx3ht1kvdx6s1afjtuf0l8o9hr].[none:Ethnicity:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{000B91CC-6002-4324-B517-99ADA51F9346}' />
+    </window>
+  </windows>
+</workbook>

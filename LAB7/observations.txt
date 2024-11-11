@@ -1,0 +1,27 @@
+Bar Chart:
+
+France has the highest count among the three countries, with a value close to 5,000.
+Spain and Germany have similar counts, both around 2,500 to 3,000, which are much lower than France's count.
+This suggests that whatever metric is being measured is significantly more prevalent in France compared to Spain and Germany.
+Pie Chart:
+
+The majority of individuals fall under the "Stayed" category, with a count of 7,963, indicated by the green portion of the chart.
+A smaller segment, "Exited", has a count of 2,037, shown in red.
+This means that a larger proportion of the group stayed, while only a minority exited, indicating higher retention.
+Histogram:
+
+The histogram shows that the most frequent values fall within the 30-40 range, with the peak count being around 4,000.
+There is a gradual decline in counts as the values increase beyond 40, with very few occurrences above 60.
+This pattern suggests that the majority of data points are concentrated in the lower ranges, especially around 30-40, and taper off at higher values.
+
+
+Common surnames such as "He," "Hu," "Boni," "Ricci," and "Lucas" appear prominently, suggesting their higher frequency.
+The variety of font sizes indicates the relative frequency of each surname in the dataset.
+Box and Whisker Plot of Balance:
+
+The median balance appears to be within the first half of the data range.
+There is a significant range in balances, with a few outliers on the high end, as indicated by the long whisker.
+Regression Plot of Age vs. Estimated Salary:
+
+The scatterplot shows no clear trend or correlation between age and estimated salary, as indicated by the nearly flat regression line.
+There is considerable variance in salary at different ages, suggesting age alone may not be a strong predictor of salary in this dataset.

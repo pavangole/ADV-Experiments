@@ -1,0 +1,2025 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1104.1106                               -->
+<workbook original-version='18.1' source-build='2022.1.0 (20221.22.0425.1709)' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='http://localhost:9100/workbooks/Womensempowerment?rev=1.5' id='Womensempowerment' path='/workbooks' revision='1.5' />
+  <preferences />
+  <datasources>
+    <datasource caption='Womens EMP (Table-16-Womens-EN-1)' inline='true' name='federated.0ulj1tv0nrg7md15q70360rgafoh' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Table-16-Womens-EN-1' name='excel-direct.1t6b2e013r4mvg1fzyxib097ymcc'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' interpretationMode='0' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1t6b2e013r4mvg1fzyxib097ymcc' name='Womens EMP' table='[&apos;Womens EMP$&apos;]' type='table'>
+          <columns gridOrigin='A1:M203:no:A1:M203:0' header='yes' outcome='2'>
+            <column datatype='string' name='Countries and areas' ordinal='0' />
+            <column datatype='real' name='Legal frameworks on gender equality in employment' ordinal='1' />
+            <column datatype='string' name='Maternity leave benefits' ordinal='2' />
+            <column datatype='string' name='Paternity leave benefits' ordinal='3' />
+            <column datatype='real' name='Demand for family planning satisfied with modern methods (%)' ordinal='4' />
+            <column datatype='real' name='Educational attainment in upper secondary for Male' ordinal='5' />
+            <column datatype='real' name='Educational attainment in upper secondary for female' ordinal='6' />
+            <column datatype='real' name='Labour force participation rate for male in total' ordinal='7' />
+            <column datatype='real' name='Labour force participation rate for female in total' ordinal='8' />
+            <column datatype='real' name='Unemployment rate for male in total' ordinal='9' />
+            <column datatype='real' name='Unemployment rate for female in total' ordinal='10' />
+            <column datatype='real' name='Financial Inclusion for male' ordinal='11' />
+            <column datatype='real' name='Financial Inclusion for female' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:M203:no:A1:M203:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Countries and areas</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Countries and areas]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Countries and areas</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RMX_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Legal frameworks on gender equality in employment</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Legal frameworks on gender equality in employment]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Legal frameworks on gender equality in employment</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Maternity leave benefits</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Maternity leave benefits]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Maternity leave benefits</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RMX_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Paternity leave benefits</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Paternity leave benefits]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Paternity leave benefits</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RMX_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Demand for family planning satisfied with modern methods (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Demand for family planning satisfied with modern methods (%)]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Demand for family planning satisfied with modern methods (%)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Educational attainment in upper secondary for Male</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Educational attainment in upper secondary for Male]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Educational attainment in upper secondary for Male</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Educational attainment in upper secondary for female</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Educational attainment in upper secondary for female]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Educational attainment in upper secondary for female</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Labour force participation rate for male in total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Labour force participation rate for male in total]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Labour force participation rate for male in total</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Labour force participation rate for female in total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Labour force participation rate for female in total]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Labour force participation rate for female in total</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unemployment rate for male in total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Unemployment rate for male in total]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Unemployment rate for male in total</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unemployment rate for female in total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Unemployment rate for female in total]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Unemployment rate for female in total</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Financial Inclusion for male</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Financial Inclusion for male]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Financial Inclusion for male</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Financial Inclusion for female</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Financial Inclusion for female]</local-name>
+            <parent-name>[Womens EMP]</parent-name>
+            <remote-alias>Financial Inclusion for female</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Countries' datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column datatype='real' name='[Financial Inclusion for female]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Financial Inclusion for male]' role='measure' type='quantitative' />
+      <column caption='Womens EMP' datatype='table' name='[__tableau_internal_object_id__].[Womens EMP_1720266B6116488488311620D5B9571A]' role='measure' type='quantitative' />
+      <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Financial Inclusion for female]' derivation='Sum' name='[sum:Financial Inclusion for female:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Financial Inclusion for male]' derivation='Sum' name='[sum:Financial Inclusion for male:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' object-id='' units='records'>
+        <connection authentication='auth-none' author-locale='es_ES' class='hyper' dbname='Data/Extracts/federated_0ulj1tv0nrg7md15q70360.hyper' default-settings='hyper' schema='Extract' tablename='Extract' update-time='05/01/2022 05:59:19 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Countries and areas</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Countries and areas]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Countries and areas</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Womens EMP</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>202</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RMX_S2' />
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Legal frameworks on gender equality in employment</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Legal frameworks on gender equality in employment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Legal frameworks on gender equality in employment</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Womens EMP</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Maternity leave benefits</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Maternity leave benefits]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Maternity leave benefits</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Womens EMP</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RMX_S2' />
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Paternity leave benefits</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Paternity leave benefits]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Paternity leave benefits</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Womens EMP</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RMX_S2' />
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Demand for family planning satisfied with modern methods (%)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Demand for family planning satisfied with modern methods (%)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Demand for family planning satisfied with modern methods (%)</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Womens EMP</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>116</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Educational attainment in upper secondary for Male</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Educational attainment in upper secondary for Male]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Educational attainment in upper secondary for Male</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Womens EMP</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>145</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Educational attainment in upper secondary for female</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Educational attainment in upper secondary for female]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Educational attainment in upper secondary for female</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Womens EMP</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>145</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Labour force participation rate for male in total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Labour force participation rate for male in total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Labour force participation rate for male in total</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Womens EMP</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>137</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Labour force participation rate for female in total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Labour force participation rate for female in total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Labour force participation rate for female in total</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Womens EMP</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>137</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Unemployment rate for male in total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Unemployment rate for male in total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Unemployment rate for male in total</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Womens EMP</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>122</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Unemployment rate for female in total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Unemployment rate for female in total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Unemployment rate for female in total</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Womens EMP</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>122</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Financial Inclusion for male</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Financial Inclusion for male]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Financial Inclusion for male</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Womens EMP</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>155</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Financial Inclusion for female</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Financial Inclusion for female]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Financial Inclusion for female</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Womens EMP</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>151</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Womens EMP_1720266B6116488488311620D5B9571A]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Countries and areas:nk]' palette='purple_10_0' type='palette'>
+            <map to='#7c4d79'>
+              <bucket>&quot;Zambia&quot;</bucket>
+            </map>
+            <map to='#7c4d79'>
+              <bucket>&quot;Zimbabwe&quot;</bucket>
+            </map>
+            <map to='#7c4e7a'>
+              <bucket>&quot;Yemen&quot;</bucket>
+            </map>
+            <map to='#7d4e7a'>
+              <bucket>&quot;Viet Nam&quot;</bucket>
+            </map>
+            <map to='#7d4f7b'>
+              <bucket>&quot;Venezuela (Bolivarian Republic of)&quot;</bucket>
+            </map>
+            <map to='#7e4f7c'>
+              <bucket>&quot;Vanuatu&quot;</bucket>
+            </map>
+            <map to='#7e507c'>
+              <bucket>&quot;Uzbekistan&quot;</bucket>
+            </map>
+            <map to='#7f517d'>
+              <bucket>&quot;Uruguay&quot;</bucket>
+            </map>
+            <map to='#7f517e'>
+              <bucket>&quot;United States&quot;</bucket>
+            </map>
+            <map to='#80527e'>
+              <bucket>&quot;United Republic of Tanzania&quot;</bucket>
+            </map>
+            <map to='#80527f'>
+              <bucket>&quot;United Kingdom&quot;</bucket>
+            </map>
+            <map to='#815380'>
+              <bucket>&quot;United Arab Emirates&quot;</bucket>
+            </map>
+            <map to='#815480'>
+              <bucket>&quot;Ukraine&quot;</bucket>
+            </map>
+            <map to='#825481'>
+              <bucket>&quot;Uganda&quot;</bucket>
+            </map>
+            <map to='#825582'>
+              <bucket>&quot;Tuvalu&quot;</bucket>
+            </map>
+            <map to='#835582'>
+              <bucket>&quot;Turks and Caicos Islands&quot;</bucket>
+            </map>
+            <map to='#835683'>
+              <bucket>&quot;Turkmenistan&quot;</bucket>
+            </map>
+            <map to='#845783'>
+              <bucket>&quot;Turkey&quot;</bucket>
+            </map>
+            <map to='#845784'>
+              <bucket>&quot;Tunisia&quot;</bucket>
+            </map>
+            <map to='#855885'>
+              <bucket>&quot;Tonga&quot;</bucket>
+            </map>
+            <map to='#855885'>
+              <bucket>&quot;Trinidad and Tobago&quot;</bucket>
+            </map>
+            <map to='#865986'>
+              <bucket>&quot;Tokelau&quot;</bucket>
+            </map>
+            <map to='#875a87'>
+              <bucket>&quot;Timor-Leste&quot;</bucket>
+            </map>
+            <map to='#875a87'>
+              <bucket>&quot;Togo&quot;</bucket>
+            </map>
+            <map to='#885b88'>
+              <bucket>&quot;Tajikistan&quot;</bucket>
+            </map>
+            <map to='#885b88'>
+              <bucket>&quot;Thailand&quot;</bucket>
+            </map>
+            <map to='#895c89'>
+              <bucket>&quot;Switzerland&quot;</bucket>
+            </map>
+            <map to='#895c89'>
+              <bucket>&quot;Syrian Arab Republic&quot;</bucket>
+            </map>
+            <map to='#8a5d8a'>
+              <bucket>&quot;Suriname&quot;</bucket>
+            </map>
+            <map to='#8a5d8a'>
+              <bucket>&quot;Sweden&quot;</bucket>
+            </map>
+            <map to='#8b5e8b'>
+              <bucket>&quot;State of Palestine&quot;</bucket>
+            </map>
+            <map to='#8b5e8b'>
+              <bucket>&quot;Sudan&quot;</bucket>
+            </map>
+            <map to='#8c5f8c'>
+              <bucket>&quot;Sri Lanka&quot;</bucket>
+            </map>
+            <map to='#8d608d'>
+              <bucket>&quot;South Sudan&quot;</bucket>
+            </map>
+            <map to='#8d608d'>
+              <bucket>&quot;Spain&quot;</bucket>
+            </map>
+            <map to='#8e618e'>
+              <bucket>&quot;Somalia&quot;</bucket>
+            </map>
+            <map to='#8e618e'>
+              <bucket>&quot;South Africa&quot;</bucket>
+            </map>
+            <map to='#8f628f'>
+              <bucket>&quot;Slovenia&quot;</bucket>
+            </map>
+            <map to='#8f628f'>
+              <bucket>&quot;Solomon Islands&quot;</bucket>
+            </map>
+            <map to='#906390'>
+              <bucket>&quot;Singapore&quot;</bucket>
+            </map>
+            <map to='#906390'>
+              <bucket>&quot;Slovakia&quot;</bucket>
+            </map>
+            <map to='#916491'>
+              <bucket>&quot;Sierra Leone&quot;</bucket>
+            </map>
+            <map to='#926491'>
+              <bucket>&quot;Seychelles&quot;</bucket>
+            </map>
+            <map to='#936592'>
+              <bucket>&quot;Serbia&quot;</bucket>
+            </map>
+            <map to='#936692'>
+              <bucket>&quot;Senegal&quot;</bucket>
+            </map>
+            <map to='#946692'>
+              <bucket>&quot;Saudi Arabia&quot;</bucket>
+            </map>
+            <map to='#956793'>
+              <bucket>&quot;Sao Tome and Principe&quot;</bucket>
+            </map>
+            <map to='#966793'>
+              <bucket>&quot;San Marino&quot;</bucket>
+            </map>
+            <map to='#966894'>
+              <bucket>&quot;Samoa&quot;</bucket>
+            </map>
+            <map to='#976894'>
+              <bucket>&quot;Saint Vincent and the Grenadines&quot;</bucket>
+            </map>
+            <map to='#986994'>
+              <bucket>&quot;Saint Lucia&quot;</bucket>
+            </map>
+            <map to='#996995'>
+              <bucket>&quot;Saint Kitts and Nevis&quot;</bucket>
+            </map>
+            <map to='#996a95'>
+              <bucket>&quot;Rwanda&quot;</bucket>
+            </map>
+            <map to='#9a6b96'>
+              <bucket>&quot;Russian Federation&quot;</bucket>
+            </map>
+            <map to='#9b6b96'>
+              <bucket>&quot;Romania&quot;</bucket>
+            </map>
+            <map to='#9c6c96'>
+              <bucket>&quot;Republic of Moldova&quot;</bucket>
+            </map>
+            <map to='#9c6c97'>
+              <bucket>&quot;Republic of Korea&quot;</bucket>
+            </map>
+            <map to='#9d6d97'>
+              <bucket>&quot;Qatar&quot;</bucket>
+            </map>
+            <map to='#9e6d98'>
+              <bucket>&quot;Portugal&quot;</bucket>
+            </map>
+            <map to='#9f6e98'>
+              <bucket>&quot;Philippines&quot;</bucket>
+            </map>
+            <map to='#9f6e98'>
+              <bucket>&quot;Poland&quot;</bucket>
+            </map>
+            <map to='#a06f99'>
+              <bucket>&quot;Peru&quot;</bucket>
+            </map>
+            <map to='#a16f99'>
+              <bucket>&quot;Paraguay&quot;</bucket>
+            </map>
+            <map to='#a27099'>
+              <bucket>&quot;Papua New Guinea&quot;</bucket>
+            </map>
+            <map to='#a2709a'>
+              <bucket>&quot;Panama&quot;</bucket>
+            </map>
+            <map to='#a3719a'>
+              <bucket>&quot;Palau&quot;</bucket>
+            </map>
+            <map to='#a4719a'>
+              <bucket>&quot;Pakistan&quot;</bucket>
+            </map>
+            <map to='#a5729b'>
+              <bucket>&quot;Oman&quot;</bucket>
+            </map>
+            <map to='#a6729b'>
+              <bucket>&quot;Norway&quot;</bucket>
+            </map>
+            <map to='#a6739b'>
+              <bucket>&quot;North Macedonia&quot;</bucket>
+            </map>
+            <map to='#a7739b'>
+              <bucket>&quot;Niue&quot;</bucket>
+            </map>
+            <map to='#a8749c'>
+              <bucket>&quot;Nigeria&quot;</bucket>
+            </map>
+            <map to='#a9749c'>
+              <bucket>&quot;Niger&quot;</bucket>
+            </map>
+            <map to='#aa759c'>
+              <bucket>&quot;Nicaragua&quot;</bucket>
+            </map>
+            <map to='#aa759d'>
+              <bucket>&quot;New Zealand&quot;</bucket>
+            </map>
+            <map to='#ab769d'>
+              <bucket>&quot;Netherlands&quot;</bucket>
+            </map>
+            <map to='#ac769d'>
+              <bucket>&quot;Nepal&quot;</bucket>
+            </map>
+            <map to='#ad779d'>
+              <bucket>&quot;Nauru&quot;</bucket>
+            </map>
+            <map to='#ae779e'>
+              <bucket>&quot;Namibia&quot;</bucket>
+            </map>
+            <map to='#ae789e'>
+              <bucket>&quot;Myanmar&quot;</bucket>
+            </map>
+            <map to='#af789e'>
+              <bucket>&quot;Mozambique&quot;</bucket>
+            </map>
+            <map to='#b0799f'>
+              <bucket>&quot;Morocco&quot;</bucket>
+            </map>
+            <map to='#b07a9f'>
+              <bucket>&quot;Montserrat&quot;</bucket>
+            </map>
+            <map to='#b17aa0'>
+              <bucket>&quot;Montenegro&quot;</bucket>
+            </map>
+            <map to='#b27ba0'>
+              <bucket>&quot;Mongolia&quot;</bucket>
+            </map>
+            <map to='#b27ba1'>
+              <bucket>&quot;Monaco&quot;</bucket>
+            </map>
+            <map to='#b37ca1'>
+              <bucket>&quot;Micronesia (Federated States of)&quot;</bucket>
+            </map>
+            <map to='#b37da2'>
+              <bucket>&quot;Mexico&quot;</bucket>
+            </map>
+            <map to='#b47da2'>
+              <bucket>&quot;Mauritius&quot;</bucket>
+            </map>
+            <map to='#b57ea3'>
+              <bucket>&quot;Mauritania&quot;</bucket>
+            </map>
+            <map to='#b57fa3'>
+              <bucket>&quot;Marshall Islands&quot;</bucket>
+            </map>
+            <map to='#b67fa4'>
+              <bucket>&quot;Malta&quot;</bucket>
+            </map>
+            <map to='#b680a4'>
+              <bucket>&quot;Mali&quot;</bucket>
+            </map>
+            <map to='#b781a5'>
+              <bucket>&quot;Maldives&quot;</bucket>
+            </map>
+            <map to='#b881a5'>
+              <bucket>&quot;Malaysia&quot;</bucket>
+            </map>
+            <map to='#b882a6'>
+              <bucket>&quot;Malawi&quot;</bucket>
+            </map>
+            <map to='#b983a6'>
+              <bucket>&quot;Madagascar&quot;</bucket>
+            </map>
+            <map to='#b983a7'>
+              <bucket>&quot;Luxembourg&quot;</bucket>
+            </map>
+            <map to='#ba84a7'>
+              <bucket>&quot;Lithuania&quot;</bucket>
+            </map>
+            <map to='#bb85a8'>
+              <bucket>&quot;Libya&quot;</bucket>
+            </map>
+            <map to='#bb85a8'>
+              <bucket>&quot;Liechtenstein&quot;</bucket>
+            </map>
+            <map to='#bc86a9'>
+              <bucket>&quot;Lesotho&quot;</bucket>
+            </map>
+            <map to='#bc86a9'>
+              <bucket>&quot;Liberia&quot;</bucket>
+            </map>
+            <map to='#bd87aa'>
+              <bucket>&quot;Lebanon&quot;</bucket>
+            </map>
+            <map to='#bd88ab'>
+              <bucket>&quot;Latvia&quot;</bucket>
+            </map>
+            <map to='#be88ab'>
+              <bucket>&quot;Lao People&apos;s Democratic Republic&quot;</bucket>
+            </map>
+            <map to='#bf89ac'>
+              <bucket>&quot;Kuwait&quot;</bucket>
+            </map>
+            <map to='#bf89ac'>
+              <bucket>&quot;Kyrgyzstan&quot;</bucket>
+            </map>
+            <map to='#c08aad'>
+              <bucket>&quot;Kiribati&quot;</bucket>
+            </map>
+            <map to='#c08bae'>
+              <bucket>&quot;Kenya&quot;</bucket>
+            </map>
+            <map to='#c18bae'>
+              <bucket>&quot;Kazakhstan&quot;</bucket>
+            </map>
+            <map to='#c18caf'>
+              <bucket>&quot;Jordan&quot;</bucket>
+            </map>
+            <map to='#c28caf'>
+              <bucket>&quot;Japan&quot;</bucket>
+            </map>
+            <map to='#c28db0'>
+              <bucket>&quot;Jamaica&quot;</bucket>
+            </map>
+            <map to='#c38eb1'>
+              <bucket>&quot;Israel&quot;</bucket>
+            </map>
+            <map to='#c38eb1'>
+              <bucket>&quot;Italy&quot;</bucket>
+            </map>
+            <map to='#c48fb2'>
+              <bucket>&quot;Ireland&quot;</bucket>
+            </map>
+            <map to='#c58fb2'>
+              <bucket>&quot;Iraq&quot;</bucket>
+            </map>
+            <map to='#c590b3'>
+              <bucket>&quot;Iran (Islamic Republic of)&quot;</bucket>
+            </map>
+            <map to='#c691b4'>
+              <bucket>&quot;India&quot;</bucket>
+            </map>
+            <map to='#c691b4'>
+              <bucket>&quot;Indonesia&quot;</bucket>
+            </map>
+            <map to='#c792b5'>
+              <bucket>&quot;Hungary&quot;</bucket>
+            </map>
+            <map to='#c792b5'>
+              <bucket>&quot;Iceland&quot;</bucket>
+            </map>
+            <map to='#c893b6'>
+              <bucket>&quot;Honduras&quot;</bucket>
+            </map>
+            <map to='#c894b6'>
+              <bucket>&quot;Holy See&quot;</bucket>
+            </map>
+            <map to='#c995b7'>
+              <bucket>&quot;Guyana&quot;</bucket>
+            </map>
+            <map to='#c995b7'>
+              <bucket>&quot;Haiti&quot;</bucket>
+            </map>
+            <map to='#ca96b8'>
+              <bucket>&quot;Guinea-Bissau&quot;</bucket>
+            </map>
+            <map to='#ca97b9'>
+              <bucket>&quot;Guinea&quot;</bucket>
+            </map>
+            <map to='#cb97b9'>
+              <bucket>&quot;Guatemala&quot;</bucket>
+            </map>
+            <map to='#cb98ba'>
+              <bucket>&quot;Grenada&quot;</bucket>
+            </map>
+            <map to='#cc99ba'>
+              <bucket>&quot;Greece&quot;</bucket>
+            </map>
+            <map to='#cc99bb'>
+              <bucket>&quot;Ghana&quot;</bucket>
+            </map>
+            <map to='#cd9abb'>
+              <bucket>&quot;Germany&quot;</bucket>
+            </map>
+            <map to='#cd9bbc'>
+              <bucket>&quot;Georgia&quot;</bucket>
+            </map>
+            <map to='#ce9cbc'>
+              <bucket>&quot;Gambia&quot;</bucket>
+            </map>
+            <map to='#ce9cbd'>
+              <bucket>&quot;Gabon&quot;</bucket>
+            </map>
+            <map to='#cf9dbd'>
+              <bucket>&quot;France&quot;</bucket>
+            </map>
+            <map to='#cf9ebe'>
+              <bucket>&quot;Finland&quot;</bucket>
+            </map>
+            <map to='#d09ebf'>
+              <bucket>&quot;Fiji&quot;</bucket>
+            </map>
+            <map to='#d09fbf'>
+              <bucket>&quot;Ethiopia&quot;</bucket>
+            </map>
+            <map to='#d1a0c0'>
+              <bucket>&quot;Estonia&quot;</bucket>
+            </map>
+            <map to='#d1a0c0'>
+              <bucket>&quot;Eswatini&quot;</bucket>
+            </map>
+            <map to='#d2a1c1'>
+              <bucket>&quot;Eritrea&quot;</bucket>
+            </map>
+            <map to='#d2a2c2'>
+              <bucket>&quot;Equatorial Guinea&quot;</bucket>
+            </map>
+            <map to='#d3a2c2'>
+              <bucket>&quot;El Salvador&quot;</bucket>
+            </map>
+            <map to='#d3a3c3'>
+              <bucket>&quot;Egypt&quot;</bucket>
+            </map>
+            <map to='#d4a4c4'>
+              <bucket>&quot;Dominican Republic&quot;</bucket>
+            </map>
+            <map to='#d4a4c4'>
+              <bucket>&quot;Ecuador&quot;</bucket>
+            </map>
+            <map to='#d5a5c5'>
+              <bucket>&quot;Dominica&quot;</bucket>
+            </map>
+            <map to='#d6a6c6'>
+              <bucket>&quot;Denmark&quot;</bucket>
+            </map>
+            <map to='#d6a6c6'>
+              <bucket>&quot;Djibouti&quot;</bucket>
+            </map>
+            <map to='#d7a7c7'>
+              <bucket>&quot;Democratic People&apos;s Republic of Korea&quot;</bucket>
+            </map>
+            <map to='#d7a7c7'>
+              <bucket>&quot;Democratic Republic of the Congo&quot;</bucket>
+            </map>
+            <map to='#d8a8c8'>
+              <bucket>&quot;Czechia&quot;</bucket>
+            </map>
+            <map to='#d8a9c9'>
+              <bucket>&quot;Cyprus&quot;</bucket>
+            </map>
+            <map to='#d9a9c9'>
+              <bucket>&quot;Cuba&quot;</bucket>
+            </map>
+            <map to='#d9aaca'>
+              <bucket>&quot;Croatia&quot;</bucket>
+            </map>
+            <map to='#daabcb'>
+              <bucket>&quot;Côte d&apos;Ivoire&quot;</bucket>
+            </map>
+            <map to='#dbabcb'>
+              <bucket>&quot;Costa Rica&quot;</bucket>
+            </map>
+            <map to='#dbaccc'>
+              <bucket>&quot;Cook Islands&quot;</bucket>
+            </map>
+            <map to='#dcadcd'>
+              <bucket>&quot;Comoros&quot;</bucket>
+            </map>
+            <map to='#dcadcd'>
+              <bucket>&quot;Congo&quot;</bucket>
+            </map>
+            <map to='#ddaece'>
+              <bucket>&quot;Colombia&quot;</bucket>
+            </map>
+            <map to='#ddafcf'>
+              <bucket>&quot;China&quot;</bucket>
+            </map>
+            <map to='#deafcf'>
+              <bucket>&quot;Chile&quot;</bucket>
+            </map>
+            <map to='#deb0d0'>
+              <bucket>&quot;Chad&quot;</bucket>
+            </map>
+            <map to='#dfb1d1'>
+              <bucket>&quot;Canada&quot;</bucket>
+            </map>
+            <map to='#dfb1d1'>
+              <bucket>&quot;Central African Republic&quot;</bucket>
+            </map>
+            <map to='#e0b2d2'>
+              <bucket>&quot;Cameroon&quot;</bucket>
+            </map>
+            <map to='#e1b2d2'>
+              <bucket>&quot;Cambodia&quot;</bucket>
+            </map>
+            <map to='#e1b3d3'>
+              <bucket>&quot;Cabo Verde&quot;</bucket>
+            </map>
+            <map to='#e2b4d4'>
+              <bucket>&quot;Burkina Faso&quot;</bucket>
+            </map>
+            <map to='#e2b4d4'>
+              <bucket>&quot;Burundi&quot;</bucket>
+            </map>
+            <map to='#e3b5d5'>
+              <bucket>&quot;Bulgaria&quot;</bucket>
+            </map>
+            <map to='#e3b6d6'>
+              <bucket>&quot;Brunei Darussalam&quot;</bucket>
+            </map>
+            <map to='#e4b6d6'>
+              <bucket>&quot;British Virgin Islands&quot;</bucket>
+            </map>
+            <map to='#e4b7d7'>
+              <bucket>&quot;Brazil&quot;</bucket>
+            </map>
+            <map to='#e5b8d8'>
+              <bucket>&quot;Bosnia and Herzegovina&quot;</bucket>
+            </map>
+            <map to='#e5b8d8'>
+              <bucket>&quot;Botswana&quot;</bucket>
+            </map>
+            <map to='#e6b9d9'>
+              <bucket>&quot;Bolivia (Plurinational State of)&quot;</bucket>
+            </map>
+            <map to='#e7bada'>
+              <bucket>&quot;Benin&quot;</bucket>
+            </map>
+            <map to='#e7bada'>
+              <bucket>&quot;Bhutan&quot;</bucket>
+            </map>
+            <map to='#e7bbdb'>
+              <bucket>&quot;Belize&quot;</bucket>
+            </map>
+            <map to='#e8bcdb'>
+              <bucket>&quot;Belgium&quot;</bucket>
+            </map>
+            <map to='#e8bddc'>
+              <bucket>&quot;Barbados&quot;</bucket>
+            </map>
+            <map to='#e8bddc'>
+              <bucket>&quot;Belarus&quot;</bucket>
+            </map>
+            <map to='#e9bedd'>
+              <bucket>&quot;Bangladesh&quot;</bucket>
+            </map>
+            <map to='#e9bfdd'>
+              <bucket>&quot;Bahrain&quot;</bucket>
+            </map>
+            <map to='#e9c0de'>
+              <bucket>&quot;Bahamas&quot;</bucket>
+            </map>
+            <map to='#eac0de'>
+              <bucket>&quot;Azerbaijan&quot;</bucket>
+            </map>
+            <map to='#eac1df'>
+              <bucket>&quot;Austria&quot;</bucket>
+            </map>
+            <map to='#eac2e0'>
+              <bucket>&quot;Australia&quot;</bucket>
+            </map>
+            <map to='#ebc3e0'>
+              <bucket>&quot;Armenia&quot;</bucket>
+            </map>
+            <map to='#ebc3e1'>
+              <bucket>&quot;Argentina&quot;</bucket>
+            </map>
+            <map to='#ebc4e1'>
+              <bucket>&quot;Antigua and Barbuda&quot;</bucket>
+            </map>
+            <map to='#ecc5e2'>
+              <bucket>&quot;Anguilla&quot;</bucket>
+            </map>
+            <map to='#ecc6e2'>
+              <bucket>&quot;Angola&quot;</bucket>
+            </map>
+            <map to='#ecc6e3'>
+              <bucket>&quot;Andorra&quot;</bucket>
+            </map>
+            <map to='#edc7e3'>
+              <bucket>&quot;Algeria&quot;</bucket>
+            </map>
+            <map to='#edc8e4'>
+              <bucket>&quot;Albania&quot;</bucket>
+            </map>
+            <map to='#eec9e5'>
+              <bucket>&quot;Afghanistan&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#89b8da'>
+              <bucket>&quot;[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for male:qk]&quot;</bucket>
+            </map>
+            <map to='#d5a4c4'>
+              <bucket>&quot;[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for female:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Estados Unidos Mexicanos&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Womens EMP' id='Womens EMP_1720266B6116488488311620D5B9571A'>
+            <properties context=''>
+              <relation connection='excel-direct.1t6b2e013r4mvg1fzyxib097ymcc' name='Womens EMP' table='[&apos;Womens EMP$&apos;]' type='table'>
+                <columns gridOrigin='A1:M203:no:A1:M203:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Countries and areas' ordinal='0' />
+                  <column datatype='real' name='Legal frameworks on gender equality in employment' ordinal='1' />
+                  <column datatype='string' name='Maternity leave benefits' ordinal='2' />
+                  <column datatype='string' name='Paternity leave benefits' ordinal='3' />
+                  <column datatype='real' name='Demand for family planning satisfied with modern methods (%)' ordinal='4' />
+                  <column datatype='real' name='Educational attainment in upper secondary for Male' ordinal='5' />
+                  <column datatype='real' name='Educational attainment in upper secondary for female' ordinal='6' />
+                  <column datatype='real' name='Labour force participation rate for male in total' ordinal='7' />
+                  <column datatype='real' name='Labour force participation rate for female in total' ordinal='8' />
+                  <column datatype='real' name='Unemployment rate for male in total' ordinal='9' />
+                  <column datatype='real' name='Unemployment rate for female in total' ordinal='10' />
+                  <column datatype='real' name='Financial Inclusion for male' ordinal='11' />
+                  <column datatype='real' name='Financial Inclusion for female' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.0ulj1tv0nrg7md15q70360rgafoh'>
+      <datasources>
+        <datasource caption='Womens EMP (Table-16-Womens-EN-1)' name='federated.0ulj1tv0nrg7md15q70360rgafoh' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0ulj1tv0nrg7md15q70360rgafoh'>
+        <column caption='Countries' datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+        <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]'>
+        <groupfilter function='level-members' level='[none:Countries and areas:nk]' />
+        <target field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Resaltado 1 (generado)' name='[Action1_57F94402F76D4A8499FDA06220D88D72]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Countries' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Hoja 1'>
+      <repository-location derived-from='http://localhost:9100/workbooks/Womensempowerment/Hoja1?rev=' id='58364472' path='/workbooks/Womensempowerment' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Womens EMP (Table-16-Womens-EN-1)' name='federated.0ulj1tv0nrg7md15q70360rgafoh' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0ulj1tv0nrg7md15q70360rgafoh'>
+            <column caption='Countries' datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column datatype='real' name='[Legal frameworks on gender equality in employment]' role='measure' type='quantitative' />
+            <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Legal frameworks on gender equality in employment]' derivation='Sum' name='[sum:Legal frameworks on gender equality in employment:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Legal frameworks on gender equality in employment:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>1.0</max>
+          </filter>
+          <slices>
+            <column>[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Legal frameworks on gender equality in employment:qk]</column>
+            <column>[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[Longitude (generated)]' field-type='quantitative' max='21375565.375473674' min='-18578030.610199727' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[Latitude (generated)]' field-type='quantitative' max='24907680.639029581' min='-21582565.274478052' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <format attr='stroke-size' value='0' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Legal frameworks on gender equality in employment:qk]' palette='purple_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Legal frameworks on gender equality in employment:qk]' value='Legal frameworks on gender equality in employment' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+            <format attr='enabled' id='hillshade_highlight_bright' value='true' />
+            <format attr='enabled' id='hillshade_highlight_med' value='true' />
+            <format attr='enabled' id='hillshade_shadow_faint' value='true' />
+            <format attr='enabled' id='hillshade_shadow_med' value='true' />
+            <format attr='enabled' id='hillshade_shadow_dark' value='true' />
+            <format attr='enabled' id='hillshade_shadow_extreme' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-bg' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries' value='true' />
+            <format attr='enabled' id='light-admin-0-boundaries-dispute' value='true' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='light' />
+            <format attr='wrap' value='true' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]' />
+              <color column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Legal frameworks on gender equality in employment:qk]' />
+              <geometry column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ulj1tv0nrg7md15q70360rgafoh].[Latitude (generated)]</rows>
+        <cols>[federated.0ulj1tv0nrg7md15q70360rgafoh].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{275CDB5D-4977-4F17-88B8-F52F8CDD2D8C}' />
+    </worksheet>
+    <worksheet name='Hoja 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Palatino' fontsize='10'>Relation between female labour force and unemployment</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/Womensempowerment/Hoja2?rev=' id='58364474' path='/workbooks/Womensempowerment' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Womens EMP (Table-16-Womens-EN-1)' name='federated.0ulj1tv0nrg7md15q70360rgafoh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ulj1tv0nrg7md15q70360rgafoh'>
+            <column caption='Countries' datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column datatype='real' name='[Labour force participation rate for female in total]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Unemployment rate for female in total]' role='measure' type='quantitative' />
+            <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Labour force participation rate for female in total]' derivation='Sum' name='[sum:Labour force participation rate for female in total:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Unemployment rate for female in total]' derivation='Sum' name='[sum:Unemployment rate for female in total:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Afghanistan&quot;</bucket>
+              <bucket>&quot;Albania&quot;</bucket>
+              <bucket>&quot;Algeria&quot;</bucket>
+              <bucket>&quot;Andorra&quot;</bucket>
+              <bucket>&quot;Angola&quot;</bucket>
+              <bucket>&quot;Anguilla&quot;</bucket>
+              <bucket>&quot;Antigua and Barbuda&quot;</bucket>
+              <bucket>&quot;Argentina&quot;</bucket>
+              <bucket>&quot;Armenia&quot;</bucket>
+              <bucket>&quot;Australia&quot;</bucket>
+              <bucket>&quot;Austria&quot;</bucket>
+              <bucket>&quot;Azerbaijan&quot;</bucket>
+              <bucket>&quot;Bahamas&quot;</bucket>
+              <bucket>&quot;Bahrain&quot;</bucket>
+              <bucket>&quot;Bangladesh&quot;</bucket>
+              <bucket>&quot;Barbados&quot;</bucket>
+              <bucket>&quot;Belarus&quot;</bucket>
+              <bucket>&quot;Belgium&quot;</bucket>
+              <bucket>&quot;Belize&quot;</bucket>
+              <bucket>&quot;Benin&quot;</bucket>
+              <bucket>&quot;Bhutan&quot;</bucket>
+              <bucket>&quot;Bolivia (Plurinational State of)&quot;</bucket>
+              <bucket>&quot;Bosnia and Herzegovina&quot;</bucket>
+              <bucket>&quot;Botswana&quot;</bucket>
+              <bucket>&quot;Brazil&quot;</bucket>
+              <bucket>&quot;British Virgin Islands&quot;</bucket>
+              <bucket>&quot;Brunei Darussalam&quot;</bucket>
+              <bucket>&quot;Bulgaria&quot;</bucket>
+              <bucket>&quot;Burkina Faso&quot;</bucket>
+              <bucket>&quot;Burundi&quot;</bucket>
+              <bucket>&quot;Cabo Verde&quot;</bucket>
+              <bucket>&quot;Cambodia&quot;</bucket>
+              <bucket>&quot;Cameroon&quot;</bucket>
+              <bucket>&quot;Canada&quot;</bucket>
+              <bucket>&quot;Central African Republic&quot;</bucket>
+              <bucket>&quot;Chad&quot;</bucket>
+              <bucket>&quot;Chile&quot;</bucket>
+              <bucket>&quot;China&quot;</bucket>
+              <bucket>&quot;Colombia&quot;</bucket>
+              <bucket>&quot;Comoros&quot;</bucket>
+              <bucket>&quot;Congo&quot;</bucket>
+              <bucket>&quot;Cook Islands&quot;</bucket>
+              <bucket>&quot;Costa Rica&quot;</bucket>
+              <bucket>&quot;Côte d&apos;Ivoire&quot;</bucket>
+              <bucket>&quot;Croatia&quot;</bucket>
+              <bucket>&quot;Cuba&quot;</bucket>
+              <bucket>&quot;Cyprus&quot;</bucket>
+              <bucket>&quot;Czechia&quot;</bucket>
+              <bucket>&quot;Democratic People&apos;s Republic of Korea&quot;</bucket>
+              <bucket>&quot;Democratic Republic of the Congo&quot;</bucket>
+              <bucket>&quot;Denmark&quot;</bucket>
+              <bucket>&quot;Djibouti&quot;</bucket>
+              <bucket>&quot;Dominica&quot;</bucket>
+              <bucket>&quot;Dominican Republic&quot;</bucket>
+              <bucket>&quot;Ecuador&quot;</bucket>
+              <bucket>&quot;Egypt&quot;</bucket>
+              <bucket>&quot;El Salvador&quot;</bucket>
+              <bucket>&quot;Equatorial Guinea&quot;</bucket>
+              <bucket>&quot;Eritrea&quot;</bucket>
+              <bucket>&quot;Estonia&quot;</bucket>
+              <bucket>&quot;Eswatini&quot;</bucket>
+              <bucket>&quot;Ethiopia&quot;</bucket>
+              <bucket>&quot;Fiji&quot;</bucket>
+              <bucket>&quot;Finland&quot;</bucket>
+              <bucket>&quot;France&quot;</bucket>
+              <bucket>&quot;Gabon&quot;</bucket>
+              <bucket>&quot;Gambia&quot;</bucket>
+              <bucket>&quot;Georgia&quot;</bucket>
+              <bucket>&quot;Germany&quot;</bucket>
+              <bucket>&quot;Ghana&quot;</bucket>
+              <bucket>&quot;Greece&quot;</bucket>
+              <bucket>&quot;Grenada&quot;</bucket>
+              <bucket>&quot;Guatemala&quot;</bucket>
+              <bucket>&quot;Guinea&quot;</bucket>
+              <bucket>&quot;Guinea-Bissau&quot;</bucket>
+              <bucket>&quot;Guyana&quot;</bucket>
+              <bucket>&quot;Haiti&quot;</bucket>
+              <bucket>&quot;Holy See&quot;</bucket>
+              <bucket>&quot;Honduras&quot;</bucket>
+              <bucket>&quot;Hungary&quot;</bucket>
+              <bucket>&quot;Iceland&quot;</bucket>
+              <bucket>&quot;India&quot;</bucket>
+              <bucket>&quot;Indonesia&quot;</bucket>
+              <bucket>&quot;Iran (Islamic Republic of)&quot;</bucket>
+              <bucket>&quot;Iraq&quot;</bucket>
+              <bucket>&quot;Ireland&quot;</bucket>
+              <bucket>&quot;Israel&quot;</bucket>
+              <bucket>&quot;Italy&quot;</bucket>
+              <bucket>&quot;Jamaica&quot;</bucket>
+              <bucket>&quot;Japan&quot;</bucket>
+              <bucket>&quot;Jordan&quot;</bucket>
+              <bucket>&quot;Kazakhstan&quot;</bucket>
+              <bucket>&quot;Kenya&quot;</bucket>
+              <bucket>&quot;Kiribati&quot;</bucket>
+              <bucket>&quot;Kuwait&quot;</bucket>
+              <bucket>&quot;Kyrgyzstan&quot;</bucket>
+              <bucket>&quot;Lao People&apos;s Democratic Republic&quot;</bucket>
+              <bucket>&quot;Latvia&quot;</bucket>
+              <bucket>&quot;Lebanon&quot;</bucket>
+              <bucket>&quot;Lesotho&quot;</bucket>
+              <bucket>&quot;Liberia&quot;</bucket>
+              <bucket>&quot;Libya&quot;</bucket>
+              <bucket>&quot;Liechtenstein&quot;</bucket>
+              <bucket>&quot;Lithuania&quot;</bucket>
+              <bucket>&quot;Luxembourg&quot;</bucket>
+              <bucket>&quot;Madagascar&quot;</bucket>
+              <bucket>&quot;Malawi&quot;</bucket>
+              <bucket>&quot;Malaysia&quot;</bucket>
+              <bucket>&quot;Maldives&quot;</bucket>
+              <bucket>&quot;Mali&quot;</bucket>
+              <bucket>&quot;Malta&quot;</bucket>
+              <bucket>&quot;Marshall Islands&quot;</bucket>
+              <bucket>&quot;Mauritania&quot;</bucket>
+              <bucket>&quot;Mauritius&quot;</bucket>
+              <bucket>&quot;Mexico&quot;</bucket>
+              <bucket>&quot;Micronesia (Federated States of)&quot;</bucket>
+              <bucket>&quot;Monaco&quot;</bucket>
+              <bucket>&quot;Mongolia&quot;</bucket>
+              <bucket>&quot;Montenegro&quot;</bucket>
+              <bucket>&quot;Montserrat&quot;</bucket>
+              <bucket>&quot;Morocco&quot;</bucket>
+              <bucket>&quot;Mozambique&quot;</bucket>
+              <bucket>&quot;Myanmar&quot;</bucket>
+              <bucket>&quot;Namibia&quot;</bucket>
+              <bucket>&quot;Nauru&quot;</bucket>
+              <bucket>&quot;Nepal&quot;</bucket>
+              <bucket>&quot;Netherlands&quot;</bucket>
+              <bucket>&quot;New Zealand&quot;</bucket>
+              <bucket>&quot;Nicaragua&quot;</bucket>
+              <bucket>&quot;Niger&quot;</bucket>
+              <bucket>&quot;Nigeria&quot;</bucket>
+              <bucket>&quot;Niue&quot;</bucket>
+              <bucket>&quot;North Macedonia&quot;</bucket>
+              <bucket>&quot;Norway&quot;</bucket>
+              <bucket>&quot;Oman&quot;</bucket>
+              <bucket>&quot;Pakistan&quot;</bucket>
+              <bucket>&quot;Palau&quot;</bucket>
+              <bucket>&quot;Panama&quot;</bucket>
+              <bucket>&quot;Papua New Guinea&quot;</bucket>
+              <bucket>&quot;Paraguay&quot;</bucket>
+              <bucket>&quot;Peru&quot;</bucket>
+              <bucket>&quot;Philippines&quot;</bucket>
+              <bucket>&quot;Poland&quot;</bucket>
+              <bucket>&quot;Portugal&quot;</bucket>
+              <bucket>&quot;Qatar&quot;</bucket>
+              <bucket>&quot;Republic of Korea&quot;</bucket>
+              <bucket>&quot;Republic of Moldova&quot;</bucket>
+              <bucket>&quot;Romania&quot;</bucket>
+              <bucket>&quot;Russian Federation&quot;</bucket>
+              <bucket>&quot;Rwanda&quot;</bucket>
+              <bucket>&quot;Saint Kitts and Nevis&quot;</bucket>
+              <bucket>&quot;Saint Lucia&quot;</bucket>
+              <bucket>&quot;Saint Vincent and the Grenadines&quot;</bucket>
+              <bucket>&quot;Samoa&quot;</bucket>
+              <bucket>&quot;San Marino&quot;</bucket>
+              <bucket>&quot;Sao Tome and Principe&quot;</bucket>
+              <bucket>&quot;Saudi Arabia&quot;</bucket>
+              <bucket>&quot;Senegal&quot;</bucket>
+              <bucket>&quot;Serbia&quot;</bucket>
+              <bucket>&quot;Seychelles&quot;</bucket>
+              <bucket>&quot;Sierra Leone&quot;</bucket>
+              <bucket>&quot;Singapore&quot;</bucket>
+              <bucket>&quot;Slovakia&quot;</bucket>
+              <bucket>&quot;Slovenia&quot;</bucket>
+              <bucket>&quot;Solomon Islands&quot;</bucket>
+              <bucket>&quot;Somalia&quot;</bucket>
+              <bucket>&quot;South Africa&quot;</bucket>
+              <bucket>&quot;South Sudan&quot;</bucket>
+              <bucket>&quot;Spain&quot;</bucket>
+              <bucket>&quot;Sri Lanka&quot;</bucket>
+              <bucket>&quot;State of Palestine&quot;</bucket>
+              <bucket>&quot;Sudan&quot;</bucket>
+              <bucket>&quot;Suriname&quot;</bucket>
+              <bucket>&quot;Sweden&quot;</bucket>
+              <bucket>&quot;Switzerland&quot;</bucket>
+              <bucket>&quot;Syrian Arab Republic&quot;</bucket>
+              <bucket>&quot;Tajikistan&quot;</bucket>
+              <bucket>&quot;Thailand&quot;</bucket>
+              <bucket>&quot;Timor-Leste&quot;</bucket>
+              <bucket>&quot;Togo&quot;</bucket>
+              <bucket>&quot;Tokelau&quot;</bucket>
+              <bucket>&quot;Tonga&quot;</bucket>
+              <bucket>&quot;Trinidad and Tobago&quot;</bucket>
+              <bucket>&quot;Tunisia&quot;</bucket>
+              <bucket>&quot;Turkey&quot;</bucket>
+              <bucket>&quot;Turkmenistan&quot;</bucket>
+              <bucket>&quot;Turks and Caicos Islands&quot;</bucket>
+              <bucket>&quot;Tuvalu&quot;</bucket>
+              <bucket>&quot;Uganda&quot;</bucket>
+              <bucket>&quot;Ukraine&quot;</bucket>
+              <bucket>&quot;United Arab Emirates&quot;</bucket>
+              <bucket>&quot;United Kingdom&quot;</bucket>
+              <bucket>&quot;United Republic of Tanzania&quot;</bucket>
+              <bucket>&quot;United States&quot;</bucket>
+              <bucket>&quot;Uruguay&quot;</bucket>
+              <bucket>&quot;Uzbekistan&quot;</bucket>
+              <bucket>&quot;Vanuatu&quot;</bucket>
+              <bucket>&quot;Venezuela (Bolivarian Republic of)&quot;</bucket>
+              <bucket>&quot;Viet Nam&quot;</bucket>
+              <bucket>&quot;Yemen&quot;</bucket>
+              <bucket>&quot;Zambia&quot;</bucket>
+              <bucket>&quot;Zimbabwe&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='quantitative' column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Unemployment rate for female in total:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Unemployment rate for female in total:qk]</column>
+            <column>[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Labour force participation rate for female in total:qk]' scope='cols' value='Labour force participation rate for female (%)' />
+            <format attr='title' class='0' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Unemployment rate for female in total:qk]' scope='rows' value='Unemployment (%)' />
+            <format attr='width' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Unemployment rate for female in total:qk]' value='56' />
+            <format attr='auto-subtitle' class='0' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Labour force participation rate for female in total:qk]' scope='cols' value='true' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-family' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Unemployment rate for female in total:qk]' value='Palatino' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Unemployment rate for female in total:qk]' value='Palatino' />
+            <format attr='font-family' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Labour force participation rate for female in total:qk]' value='Palatino' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]' value='Countries'>
+              <formatted-text>
+                <run fontalignment='1'>Countries</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Unemployment rate for female in total:qk]</rows>
+        <cols>[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Labour force participation rate for female in total:qk]</cols>
+      </table>
+      <simple-id uuid='{A391B1A2-CC0F-417E-A6D4-100E80832DE4}' />
+    </worksheet>
+    <worksheet name='Hoja 3'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/Womensempowerment/Hoja3?rev=' id='58364475' path='/workbooks/Womensempowerment' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Womens EMP (Table-16-Womens-EN-1)' name='federated.0ulj1tv0nrg7md15q70360rgafoh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ulj1tv0nrg7md15q70360rgafoh'>
+            <column caption='Countries' datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column datatype='real' name='[Financial Inclusion for female]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Financial Inclusion for male]' role='measure' type='quantitative' />
+            <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Financial Inclusion for female]' derivation='Sum' name='[sum:Financial Inclusion for female:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Financial Inclusion for male]' derivation='Sum' name='[sum:Financial Inclusion for male:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for female:qk]' included-values='in-range'>
+            <min>0.0167</min>
+            <max>1.0</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for female:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for female:qk]</column>
+            <column>[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for male:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for male:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for female:qk]' scope='rows' value='Financial Inclusion (%)' />
+            <format attr='height' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]' value='65' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' scope='cols' value='Palatino' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[:Measure Names]' value='&#10;'>
+              <formatted-text>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='340' />
+                <format attr='maxheight' value='340' />
+                <format attr='minwidth' value='3100' />
+                <format attr='maxwidth' value='3100' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for female:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for male:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0ulj1tv0nrg7md15q70360rgafoh].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for female:qk] + [federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Financial Inclusion for male:qk])</rows>
+        <cols>[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]</cols>
+      </table>
+      <simple-id uuid='{FC8EB482-C24C-42D3-A415-69FED733351E}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff' fontname='PT Serif Caption' fontsize='24'>Women&apos;s Economic Empowerment</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#ffffff' fontname='Tableau Bold'>                         |  </run>
+            <run fontalignment='1' fontcolor='#ffffff' fontname='Savoye LET'>for every child</run>
+            <run fontalignment='1'>Æ&#10;&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/Womensempowerment/Dashboard1?rev=' id='58364470' path='/workbooks/Womensempowerment' revision='' />
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#ffffff' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='border-style' value='solid' />
+          <format attr='border-color' value='#555555' />
+          <format attr='background-color' value='#169cff' />
+        </style-rule>
+        <style-rule element='dash-subtitle'>
+          <format attr='background-color' value='#ffffff' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1300' minheight='900' minwidth='1300' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='5' param='vert' type-v2='layout-flow' w='98770' x='615' y='889'>
+            <zone fixed-size='109' h='13000' id='7' is-fixed='true' type-v2='title' w='98770' x='615' y='889'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='7222' id='9' is-centered='0' is-scaled='1' param='Image/UNICEF_FLAG.png' type-v2='bitmap' w='8231' x='42538' y='5111' />
+        <zone h='77556' id='12' name='Hoja 1' show-title='false' w='46154' x='538' y='22889' />
+        <zone h='8667' id='13' name='Hoja 1' pane-specification-id='0' param='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Legal frameworks on gender equality in employment:qk]' type-v2='color' w='24308' x='11308' y='86000' />
+        <zone h='36111' id='14' name='Hoja 2' w='52308' x='46769' y='36667' />
+        <zone h='16000' id='15' name='Hoja 2' pane-specification-id='5' param='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]' type-v2='color' w='52077' x='46846' y='22556' />
+        <zone forceUpdate='true' h='7333' id='16' type-v2='text' w='34077' x='8231' y='26222'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#333333' fontname='Palatino' fontsize='16'>Legal framework on gender equality in employment per country (2018)</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='9000' id='17' type-v2='text' w='98154' x='769' y='13556'>
+          <formatted-text>
+            <run bold='true' fontcolor='#b07aa1' fontname='Tableau Medium' fontsize='10'>Women’s economic empowerment is central to realizing women’s rights and gender equality.</run>
+            <run bold='true' fontcolor='#595a5c' fontname='Tableau Medium' fontsize='10'>Æ </run>
+            <run fontcolor='#1b1b1b' fontname='Tableau Medium' fontsize='10'>Women’s economic empowerment includes women’s ability to participate equally in existing markets; their access to and control over productive resources, access to decent work, control over their own time, lives and bodies; and increased voice, agency and meaningful participation in economic decision-making at all levels from the household to international institutions.</run>
+          </formatted-text>
+        </zone>
+        <zone h='28333' id='18' name='Hoja 3' w='52692' x='46846' y='71889' />
+        <zone h='6444' id='19' name='Hoja 3' pane-specification-id='1' param='[federated.0ulj1tv0nrg7md15q70360rgafoh].[:Measure Names]' type-v2='color' w='16692' x='51000' y='75444' />
+        <zone forceUpdate='true' h='5111' id='20' type-v2='text' w='18615' x='81692' y='8556'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontname='PT Serif Caption'>By Alan Benjamin Flores Hernandez</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#ffffff' fontname='PT Serif Caption'>In partnership with UNICEF</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#ffffff' fontname='PT Serif Caption' fontsize='24'>Women&apos;s Economic Empowerment</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#ffffff' fontname='Tableau Bold'>                         |  </run>
+                <run fontalignment='1' fontcolor='#ffffff' fontname='Savoye LET'>for every child</run>
+                <run fontalignment='1'>Æ&#10;&#10;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='36' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='35' param='vert' type-v2='layout-flow' w='98770' x='615' y='889'>
+                <zone fixed-size='109' h='13000' id='7' type-v2='title' w='98770' x='615' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='65' h='7222' id='9' is-centered='0' is-fixed='true' is-scaled='1' param='Image/UNICEF_FLAG.png' type-v2='bitmap' w='8231' x='42538' y='5111'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5111' id='20' type-v2='text' w='18615' x='81692' y='8556'>
+                  <formatted-text>
+                    <run fontcolor='#ffffff' fontname='PT Serif Caption'>By Alan Benjamin Flores Hernandez</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#ffffff' fontname='PT Serif Caption'>In partnership with UNICEF</run>
+                    <run>Æ&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='9000' id='17' type-v2='text' w='98154' x='769' y='13556'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#b07aa1' fontname='Tableau Medium' fontsize='10'>Women’s economic empowerment is central to realizing women’s rights and gender equality.</run>
+                    <run bold='true' fontcolor='#595a5c' fontname='Tableau Medium' fontsize='10'>Æ </run>
+                    <run fontcolor='#1b1b1b' fontname='Tableau Medium' fontsize='10'>Women’s economic empowerment includes women’s ability to participate equally in existing markets; their access to and control over productive resources, access to decent work, control over their own time, lives and bodies; and increased voice, agency and meaningful participation in economic decision-making at all levels from the household to international institutions.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='77556' id='12' is-fixed='true' name='Hoja 1' show-title='false' w='46154' x='538' y='22889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8667' id='13' name='Hoja 1' pane-specification-id='0' param='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Legal frameworks on gender equality in employment:qk]' type-v2='color' w='24308' x='11308' y='86000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='7333' id='16' type-v2='text' w='34077' x='8231' y='26222'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#333333' fontname='Palatino' fontsize='16'>Legal framework on gender equality in employment per country (2018)</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36111' id='14' is-fixed='true' name='Hoja 2' w='52308' x='46769' y='36667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='16000' id='15' name='Hoja 2' pane-specification-id='5' param='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]' type-v2='color' w='52077' x='46846' y='22556'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='255' h='28333' id='18' is-fixed='true' name='Hoja 3' w='52692' x='46846' y='71889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6444' id='19' name='Hoja 3' pane-specification-id='1' param='[federated.0ulj1tv0nrg7md15q70360rgafoh].[:Measure Names]' type-v2='color' w='16692' x='51000' y='75444'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{08D68E34-FD58-4285-A2C1-6876B906B0F7}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Hoja 1'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+        <viewpoint name='Hoja 2'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Hoja 3'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[:Measure Names]'>
+            <bucket-selection />
+          </highlight>
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+      </viewpoints>
+      <active id='19' />
+      <simple-id uuid='{082EF42C-33C5-4474-9508-3754DDB7E3D1}' />
+    </window>
+    <window class='worksheet' name='Hoja 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='175'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.0ulj1tv0nrg7md15q70360rgafoh].[sum:Legal frameworks on gender equality in employment:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{66DD3E53-2E59-4A14-987C-DACE7560D2D6}' />
+    </window>
+    <window class='worksheet' name='Hoja 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='5' param='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight field='[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]'>
+          <bucket-selection />
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{43928B4D-9D24-4604-A4E0-79D729EF2376}' />
+    </window>
+    <window class='worksheet' name='Hoja 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='1' param='[federated.0ulj1tv0nrg7md15q70360rgafoh].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ulj1tv0nrg7md15q70360rgafoh].[none:Countries and areas:nk]</field>
+          </color-one-way>
+        </highlight>
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+      <simple-id uuid='{C6E338B4-30CC-4CB2-B29C-B78FD2F5D580}' />
+    </window>
+  </windows>
+</workbook>

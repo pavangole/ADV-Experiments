@@ -1,0 +1,20 @@
+Yearly Trend:
+
+There is a significant upward trend over the years, with a sharp increase around 2010-2011.
+This suggests growth in the metric being measured, potentially indicating increased participation, revenue, or another key metric.
+Top Performing States:
+
+"Mizoram A" and "Madhya Pradesh A" are leading states in performance.
+A few states (e.g., Assam, Meghalaya) also rank highly but do not outperform Mizoram and Madhya Pradesh.
+State-wise Comparison:
+
+Year-on-year comparisons show varying trends in performance across different states.
+For example, Mizoram shows a higher value in 2011, while other states like Assam have more stable values over the years.
+Distribution:
+
+The distribution chart indicates shares of different states, with Mizoram, Madhya Pradesh, and Assam taking significant portions.
+States like Manipur and Andhra Pradesh appear to have smaller shares.
+Growth Analysis:
+
+Mizoram shows the highest growth, indicating a strong year-over-year change.
+Other states also show growth, but Mizoram’s change stands out.
