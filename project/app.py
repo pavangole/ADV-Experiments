@@ -59,7 +59,7 @@ def show_assistant_message(message):
 
 
 # Configure generative AI
-genai.configure(api_key="AIzaSyBJ1wvwfRD9yuz64PU9uFBUQnGNvpj2Go0")
+genai.configure(api_key="YOUR_API_KEY")
 model = genai.GenerativeModel(model_name="gemini-1.5-pro")
 
 st.set_page_config(page_title="Visualize GPT", layout="wide", page_icon="📊")
